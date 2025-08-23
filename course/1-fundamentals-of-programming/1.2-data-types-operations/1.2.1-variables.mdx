@@ -12,7 +12,17 @@ Variables are like labeled boxes that store information for you to use later. Yo
 
 Do you remeber how we added the prime hub block to the setup? That block has a input field which you can fill with a name. The default name is `prime hub`, but you can change it to anything you want.
 
-![Setup block with prime hub variable](../../res/bare.png)
+<img
+  src="/res/bare.png"
+  alt="Setup block with prime hub variable"
+  style={{ width: "25%" }}
+/>
+
+```python
+from pybricks.hubs import PrimeHub
+
+prime_hub = PrimeHub()
+```
 
 This actually allready is a variable! The variable named `prime hub` stores a special kind of thing called an "object" that represents your LEGO Prime Hub.
 
@@ -20,6 +30,171 @@ We can use the name of our hub later in our code to tell the program to do somet
 
 You might have guessed it already, the `set up` block is where we define our variables for our entire program.
 
-### Creating Variables?
+## How to work with variables?
 
-Now you might be wondering, but how do I create my own variables? For this there is a red labeled `Variable` section in left side bar of the Pybricks Code Editor. It has a suitcase as a icon.
+Now you might be wondering, but how do I create my own variables? For this there is a red labeled `Variable` section in left side bar of the Pybricks Code Editor. It has a suitcase as a icon:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/res/var_place.png"
+  alt="Variables section in Pybricks Code Editor"
+  style={{ width: "75%" }}
+/>
+
+Click on it and you will a options bar pop up:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/res/var_options.png"
+  alt="Variables options in Pybricks Code Editor"
+  style={{ width: "40%" }}
+/>
+
+You see two sections:
+
+**Variables** and **My devices**. For now, we will ignore the **My devices** section, as it is not relevant for this part of the course.
+
+The **Variables** section allows you to:
+
+- setup a new variable -> the block that says "data starting at 0"
+- reference an existing variable -> the block that says "data"
+- set a value to an existing variable -> the block that says "data set to 0"
+
+## How to use variables?
+
+Lets create a programm thats prints the number 10 by using a variable.
+
+### Create a new variable
+
+1.  drag the `data starting at 0` block into the `set up` block.
+2.  You can change the name of the variable by clicking on the text `data` and typing a new name.
+3.  Let's name the variable `count`.
+4.  Assign it the value `10` by clicking on the `0` and typing `10`.
+
+Your code should now look like this:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/res/var_set_count.png"
+  alt="Variable count set to 10"
+  style={{ width: "25%" }}
+/>
+
+```python
+from pybricks.hubs import PrimeHub
+
+prime_hub = PrimeHub()
+
+count = 10
+
+```
+
+### Reference an existing variable
+
+Now we want to print the value of our variable `count`. Variables are pilled shaped in pybricks code. And all the blocks that can use a variable have a pilled shaped input field. Thats how you can identify where you can use a variable. The print statement is such a block.
+
+First add a print statement to the `programm` block. We did that already in the setup section. You can find it under the blue `output` option, its the second- last block.
+
+Once you have added the print statement. Notice the pilled shaped input field:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/res/var_print_placeholder.png"
+  alt="With print statement"
+  style={{ width: "25%" }}
+/>
+
+```python
+from pybricks.hubs import PrimeHub
+
+prime_hub = PrimeHub()
+
+count = 10
+
+print("abc")
+```
+
+Now we can reference our variable `count` by dragging the `count` block from the **Variables** section into the pilled shaped input field of the print statement.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/res/var_drag.png"
+  alt="Drag count variable into print statement"
+  style={{ width: "75%" }}
+/>
+
+Note that at later stage you might have multiple variables. In that case you can click on the variable block in your code to open a dropdown menu and select the variable you want to use:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/res/var_dropdown.png"
+  alt="Variable dropdown menu"
+  style={{ width: "50%" }}
+/>
+
+So your final code should look like this:
+
+<img
+  src="1-fundamentals-of-programming/1.2-data-types-operations/res/var_ref_count.png"
+  alt="Final variable code"
+  style={{ width: "25%" }}
+/>
+
+```python
+from pybricks.hubs import PrimeHub
+
+prime_hub = PrimeHub()
+
+count = 10
+
+print(count)
+```
+
+When you run this program, it will print the number `10` to the console, which is the value stored in the variable `count`.
+
+### Changing the value of a variable
+
+Often you will want to change the value of a variable after you have created it. For this you can use the `data set to 0` block from the **Variables** section. Do the following:
+
+1. Below the current print statement, drag and drop the `count set to 0` block. Change the `0` to `20`.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/res/var_count_reassign.png"
+  alt="Set count variable to 20"
+  style={{ width: "75%" }}
+/>
+
+2. Then add another print statement below it. Drag the `count` variable into the pilled shaped input field of the new print statement. (like before)
+
+Your final program should look like this:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/res/var_reassign_final.png"
+  alt="Final variable code with reassignment"
+  style={{ width: "25%" }}
+/>
+
+```python
+from pybricks.hubs import PrimeHub
+
+prime_hub = PrimeHub()
+
+count = 10
+
+print(count)
+
+count = 20
+
+print(count)
+```
+
+Now before you run the program, think about what it will print to the console. There will be two print statements. Which one is the first and which one is the second?
+
+When you run this program, it will print:
+
+```shell
+10
+20
+```
+
+Did you get it right? If not, don't worry! Understanding how variables work takes practice. Just remember that when you change a variable's value, it only affects the code that comes **after** the change. Thats why its important to read code from top to bottom, just like you would read a book.
+
+## Summary
+
+Variables are like labeled boxes that store information for you to use later. You can create a variable using the `data starting at 0` block in the `set up` section of your program. You can reference a variable by dragging it into pilled shaped input fields of other blocks. And you can change the value of a variable using the `data set to 0` block.
+
+The next sections will cover specific data types and operations you can perform with them. You already learned your first one: numbers! But there is more to come.
