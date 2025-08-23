@@ -21,7 +21,8 @@
         "kaiwood.center-editor-window",
         "eamodio.gitlens",
         "wayou.vscode-todo-highlight",
-        "PKief.material-icon-theme"
+        "PKief.material-icon-theme",
+        "unifiedjs.vscode-mdx"
       ]
     }
   },
