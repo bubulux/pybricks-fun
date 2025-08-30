@@ -1,0 +1,261 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.2 Numbers/1.2.2.1 Introduction" />
+
+# 1.2.2 Numbers
+
+## Section reference
+
+The numbers panel will be mentioned, this is where its at:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/panel.png"
+  alt="Setup block with prime hub variable"
+  style={{ width: "50%" }}
+/>
+
+## What are numbers?
+
+As the name suggests we can use numbers to represent all sorts of things, to give you some ideas:
+
+- represent a certain count, like how often did i do a certain things -> i.e how much distance did i drive already?
+- you might want to know what angle a motor has, or define a target angle
+  --> give also more simple examples use the robotics for last examples
+
+We can compare them, i.e. are they smaller, greater or equal to one another. But we can also add them up, subtract and actually also do much more complex math. Pybricks supports this, but we will focus on the most basic operations.
+
+To illustrate these simple operations lets use a simple exampl. For that create two variables one called first_num (value 10) the other sec_num (value 20) and print both to the console:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/base.png"
+  alt="Setup block with prime hub variable"
+  style={{ width: "50%" }}
+/>
+
+```python
+# Initialize variables.
+first_num = 10
+sec_num = 20
+
+# The main program starts here.
+print(first_num)
+print(sec_num)
+```
+
+The output should be:
+
+```
+10
+20
+```
+
+## Simple arithmetic
+
+Click on the sidebar on the green Data field, the very first block allows you two insert two numbers and do a operation like add, subtract, multiply or divide (and more)
+
+You can type in any number you like (static) or reference variables. Whatever you put in there must be number though, else the programm will run into weird errors.
+
+Note that when you run this operation, it will return its value, this you can use to print it or even set it further as a variable. The value itself is of course a number. This is important to mention because there are operations you can do on numbers, that will return something different, like a True or False statement, these are called booleans, and we will cover these in the section after this one.
+
+For example lets use just some numbers, ignore the variable statements for now:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/print_arith.png"
+  alt="Setup block with prime hub variable"
+  style={{ width: "50%" }}
+/>
+
+```python
+# The main program starts here.
+print(10 + 1)
+print(10 - 1)
+print(10 * 2)
+print(10 / 2)
+
+```
+
+What do you expect the output to be?
+
+```
+11
+9
+20
+5.0
+```
+
+You might have guessed 3 of the values, but you might be suprised by the fourth. This is very important: 5.0 is a number, but a special kind of number (explain floats, why sometimes they are returned in python)...
+
+Now lets do something similiar, but reference this time our first_num variable and also print it in the first and last statement:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/print_arith_var.png"
+  alt="Setup block with prime hub variable"
+  style={{ width: "50%" }}
+/>
+
+```python
+# Initialize variables.
+first_num = 10
+
+# The main program starts here.
+print(first_num)
+print(first_num + 1)
+print(first_num - 1)
+print(first_num * 2)
+print(first_num / 2)
+print(first_num)
+```
+
+What do you thing the output will be this time?
+
+```
+10
+11
+9
+20
+5.0
+10
+```
+
+The operations are the same. The output is too, this makes sense, because our reference is first_num and its value is 10.
+What do you think would happen, if you used the sec_num reference? How would the output change, note that its value is 20.
+
+```
+20
+21
+19
+40
+10.0
+20
+```
+
+Also did you note that the first and last print statement stays 10 (or 20 if you also ran the second example)? That is also important to note, because it shows that this operation, is "in-place" it has no effect on the values that it uses. But you can of course use this kind of statement to reassign the values of variables
+
+Remeber the variables section, we can do this by using the set statement and instead of just using a plain number, we can use a operation. Lets say we want to add 10 to the variable and then divide it by two afterwards.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/print_arith_reassign.png"
+  alt="Setup block with prime hub variable"
+  style={{ width: "50%" }}
+/>
+
+```python
+# Initialize variables.
+first_num = 10
+
+# The main program starts here.
+print(first_num)
+first_num = first_num + 10
+print(first_num)
+first_num = first_num / 2
+print(first_num)
+```
+
+You can see, that the output shows, the reassignments were succcessfull.
+
+```
+10
+20
+10.0
+```
+
+## Random Numbers
+
+You can also generate random numbers, that can be helpful for various reasons:
+
+list some reasons.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/random.png"
+  alt="Setup block with prime hub variable"
+  style={{ width: "50%" }}
+/>
+
+```python
+from urandom import randint
+
+# Initialize variables.
+first_num = 10
+sec_num = 20
+
+
+# The main program starts here.
+print(randint(first_num, sec_num))
+```
+
+Run this programm multiple times and you will see different outputs in the specified range.
+
+## More operations
+
+There are even more operations that pybricks support, we are not going to list all of them. The second pill that has "abs" as a default option contains many more operations you can try yourself and see if they might help you. As always when you click on the dropdown, the optiosn will be shown. But there are some, that commonly are helpfull.
+
+For example, lets say, you want to know which of two values is the largest and you want to immediately use this value, what would you do? For this case there is a max operation and likewise a min operation.
+
+Similiar, remember our special number that we returned when we divided? We can round it if we want to.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/more_ops.png"
+  alt="Setup block with prime hub variable"
+  style={{ width: "50%" }}
+/>
+
+```python
+# Initialize variables.
+first_num = 10
+sec_num = 20
+
+
+# The main program starts here.
+print(max(first_num, sec_num))
+print(min(first_num, sec_num))
+print(round(first_num / 2))
+```
+
+```
+20
+10
+5
+```
+
+The first two outputs are expected, the larger number is sec_num, whoose value is 20, so 20 is returned. The smaller value is first_num, thus the next statement is returning 10.
+
+When we divid 10 again by 2, we previously returned 5.0, a float. But now we round it, and this operation makes a back to a integer.
+
+Also note here, we nested the division pill inside the round pill. This is of course possible will operations. As long as they return something, the value can be further used in surrounding operations.
+
+This also teaches us something very important about the order of execution. Code is executed from the most inner code, and then subsquently passed to its next outer layer. So first the division happens, passes down 5.0 to the round function which then returns 5.
+
+Lets make a even more complex example to really drive down this point:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/order_of_op.png"
+  alt="Setup block with prime hub variable"
+  style={{ width: "100%" }}
+/>
+
+```python
+from umath import ceil
+
+# Initialize variables.
+first_num = 10
+sec_num = 20
+
+
+# The main program starts here.
+print(max(round(first_num / 2) + 10, ceil(sec_num / 3)))
+print(min(round(first_num / 2) + 10, ceil(sec_num / 3)))
+```
+
+The output is:
+
+```
+15
+7
+```
+
+(Explain step for step the order of operation and why this returns this way)
+
+## Summary
+
+You can of course do even more complex math here, and if you want just explore the functions, try values, print the statement etc.
+The most important take aways are, summarize...
