@@ -4,31 +4,43 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # 1.2.2 Numbers
 
-## Section reference
+Welcome to the wonderful world of numbers in programming! Just like in math class, numbers are everywhere in coding - but they're much more powerful when you know how to use them properly.
 
-The numbers panel will be mentioned, this is where its at:
+## Finding the Numbers Panel
+
+Before we dive in, let's locate where all the number magic happens. In the Pybricks Code Editor, look for the green **Math** section in the left sidebar:
 
 <img
   src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/panel.png"
-  alt="Setup block with prime hub variable"
+  alt="Math panel in Pybricks Code Editor"
   style={{ width: "50%" }}
 />
 
-## What are numbers?
+This is your mathematical toolbox - we'll be using it a lot!
 
-As the name suggests we can use numbers to represent all sorts of things, to give you some ideas:
+## What Are Numbers in Programming?
 
-- represent a certain count, like how often did i do a certain things -> i.e how much distance did i drive already?
-- you might want to know what angle a motor has, or define a target angle
-  --> give also more simple examples use the robotics for last examples
+Think of numbers in programming like ingredients in cooking. Just as you need specific amounts of flour, sugar, and eggs to bake a cake, you need numbers to tell your robot exactly what to do.
 
-We can compare them, i.e. are they smaller, greater or equal to one another. But we can also add them up, subtract and actually also do much more complex math. Pybricks supports this, but we will focus on the most basic operations.
+Here are some real-world examples of what numbers represent:
 
-To illustrate these simple operations lets use a simple exampl. For that create two variables one called first_num (value 10) the other sec_num (value 20) and print both to the console:
+- **Counting things**: How many times has your robot moved forward? How many LEGO pieces did it sort?
+- **Measuring distances**: How far should your robot travel? (Maybe 50 centimeters to reach the target)
+- **Setting angles**: What direction should your robot turn? (Perhaps 90 degrees to make a right turn)
+- **Timing actions**: How long should your robot wait? (Maybe 3 seconds before starting the next move)
+- **Speed control**: How fast should your motors spin? (Maybe at 50% power for smooth movement)
+
+Numbers are like the language your robot understands for "how much," "how many," and "how long."
+
+The cool thing about numbers in programming is that you can do all the math operations you know from school - adding, subtracting, multiplying, and dividing. But you can also compare them (which is bigger?) and use them to make decisions.
+
+Let's start with a simple example to see numbers in action. We'll create two variables - think of them as labeled boxes that hold our numbers. If you need a refresher on variables, check out the [Variables section](../1.2.1-variables/) we covered earlier.
+
+Create two variables: one called `first_num` with the value 10, and another called `sec_num` with the value 20. Then print both to see what happens:
 
 <img
   src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/base.png"
-  alt="Setup block with prime hub variable"
+  alt="Two variables with numbers"
   style={{ width: "50%" }}
 />
 
@@ -49,15 +61,23 @@ The output should be:
 20
 ```
 
-## Simple arithmetic
+Perfect! Your robot now knows about these two numbers and can work with them.
 
-Click on the sidebar on the green Data field, the very first block allows you two insert two numbers and do a operation like add, subtract, multiply or divide (and more)
+## Simple Arithmetic - Your Robot's Calculator
 
-You can type in any number you like (static) or reference variables. Whatever you put in there must be number though, else the programm will run into weird errors.
+Remember your calculator from math class? Programming gives your robot its own built-in calculator that's even more powerful!
 
-Note that when you run this operation, it will return its value, this you can use to print it or even set it further as a variable. The value itself is of course a number. This is important to mention because there are operations you can do on numbers, that will return something different, like a True or False statement, these are called booleans, and we will cover these in the section after this one.
+In the green **Math** section, you'll find the arithmetic block - it's like having a mini calculator right in your code. This block lets you do all the basic math operations: addition (+), subtraction (-), multiplication (×), and division (÷).
 
-For example lets use just some numbers, ignore the variable statements for now:
+Think of it like this: if your robot were a chef, arithmetic operations would be like following a recipe. "Take 2 cups of flour, add 1 cup of sugar, multiply by 3 batches..." - except instead of ingredients, we're working with numbers!
+
+Here's the important part: you can either type in specific numbers (like 10 + 5) or use variables (like `first_num + sec_num`). Just remember - whatever you put in there must be a number, otherwise your program will get confused and throw an error.
+
+When you run an arithmetic operation, it gives you back a result - and that result is also a number! This means you can use that result to print it, store it in a variable, or even use it in another calculation. It's like a chain reaction of math!
+
+**Pro tip**: Some operations give you back different types of answers. Most return numbers, but some (like comparing if one number is bigger than another) return True or False answers. We call these "booleans" and we'll explore them in the next section.
+
+Let's see arithmetic in action with some basic examples:
 
 <img
   src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/print_arith.png"
@@ -71,10 +91,11 @@ print(10 + 1)
 print(10 - 1)
 print(10 * 2)
 print(10 / 2)
-
 ```
 
-What do you expect the output to be?
+Before you run this, take a moment to predict: what do you think each line will print? Write down your guesses!
+
+The actual output is:
 
 ```
 11
@@ -83,13 +104,22 @@ What do you expect the output to be?
 5.0
 ```
 
-You might have guessed 3 of the values, but you might be suprised by the fourth. This is very important: 5.0 is a number, but a special kind of number (explain floats, why sometimes they are returned in python)...
+How did you do? If you got the first three right but were surprised by `5.0` instead of just `5`, you've discovered something important about programming!
 
-Now lets do something similiar, but reference this time our first_num variable and also print it in the first and last statement:
+**Why 5.0 and not 5?** In programming, there are actually two types of numbers:
+
+- **Integers** (whole numbers like 1, 2, 10, -5)
+- **Floats** (decimal numbers like 5.0, 3.14, -2.5)
+
+When you divide in Python, it always gives you a float (decimal number) as the result, even if the answer could be a whole number. It's like the computer saying, "I did division, so I'm giving you the most precise answer possible!" This is actually helpful because division doesn't always result in whole numbers (think 10 ÷ 3 = 3.333...).
+
+### Using Variables in Arithmetic
+
+Now let's try the same operations, but using our `first_num` variable instead of typing the number 10 directly. This is where programming gets really powerful - we can write code that works with any values!
 
 <img
   src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/print_arith_var.png"
-  alt="Setup block with prime hub variable"
+  alt="Arithmetic operations with variables"
   style={{ width: "50%" }}
 />
 
@@ -106,7 +136,9 @@ print(first_num / 2)
 print(first_num)
 ```
 
-What do you thing the output will be this time?
+What do you think the output will be this time? Here's a hint: notice that we print `first_num` at both the beginning and the end. Why do you think we do that?
+
+The output is:
 
 ```
 10
@@ -117,8 +149,9 @@ What do you thing the output will be this time?
 10
 ```
 
-The operations are the same. The output is too, this makes sense, because our reference is first_num and its value is 10.
-What do you think would happen, if you used the sec_num reference? How would the output change, note that its value is 20.
+The operations give us the same results as before - that makes perfect sense! Our variable `first_num` holds the value 10, so `first_num + 1` is exactly the same as `10 + 1`.
+
+**Challenge question**: What would happen if you used `sec_num` (which has the value 20) instead? Can you predict the output?
 
 ```
 20
@@ -129,13 +162,27 @@ What do you think would happen, if you used the sec_num reference? How would the
 20
 ```
 
-Also did you note that the first and last print statement stays 10 (or 20 if you also ran the second example)? That is also important to note, because it shows that this operation, is "in-place" it has no effect on the values that it uses. But you can of course use this kind of statement to reassign the values of variables
+### A Crucial Programming Concept: Operations Don't Change Variables
 
-Remeber the variables section, we can do this by using the set statement and instead of just using a plain number, we can use a operation. Lets say we want to add 10 to the variable and then divide it by two afterwards.
+Here's something super important to notice: look at the first and last print statements in our code. They both show the same value (10)! This teaches us a fundamental programming concept:
+
+**Arithmetic operations are "read-only" - they don't change the original values.**
+
+Think of it like taking a photo of a number, doing math with the photo, but leaving the original number untouched. When we write `first_num + 1`, we're not changing `first_num` - we're just calculating what that value plus one would be.
+
+This is like asking "What would happen if I added 1 to this number?" without actually changing the original number. The original stays safe and unchanged.
+
+### Actually Changing Variable Values
+
+But what if you DO want to change a variable's value based on a calculation? That's where variable assignment comes in! Remember from the [Variables section](../1.2.1-variables/) how we can set a variable to a new value?
+
+Let's say we want to add 10 to our variable, then divide the result by 2. We can do this step by step:
+
+Let's say we want to add 10 to our variable, then divide the result by 2. We can do this step by step:
 
 <img
   src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/print_arith_reassign.png"
-  alt="Setup block with prime hub variable"
+  alt="Reassigning variables with arithmetic operations"
   style={{ width: "50%" }}
 />
 
@@ -151,7 +198,16 @@ first_num = first_num / 2
 print(first_num)
 ```
 
-You can see, that the output shows, the reassignments were succcessfull.
+This shows how to actually modify a variable using arithmetic. Let's trace through this step by step:
+
+1. Start with `first_num = 10`
+2. Print it: shows `10`
+3. Calculate `first_num + 10` (which is `10 + 10 = 20`) and store the result back in `first_num`
+4. Print it: shows `20`
+5. Calculate `first_num / 2` (which is `20 / 2 = 10.0`) and store the result back in `first_num`
+6. Print it: shows `10.0`
+
+The output confirms our step-by-step logic:
 
 ```
 10
@@ -159,15 +215,30 @@ You can see, that the output shows, the reassignments were succcessfull.
 10.0
 ```
 
-## Random Numbers
+Notice how `first_num = first_num + 10` might look weird at first - how can something equal itself plus 10? Remember, the computer reads this from right to left: "Calculate the current value of `first_num` plus 10, then store that new value back into `first_num`."
 
-You can also generate random numbers, that can be helpful for various reasons:
+## Random Numbers - Adding Surprise to Your Robot!
 
-list some reasons.
+Sometimes you want your robot to be a little unpredictable - maybe you want it to choose a random direction, pick a random color, or wait a random amount of time. That's where random numbers come in handy!
+
+Random numbers are perfect for:
+
+- Making games more interesting (random dice rolls, random enemy movements)
+- Testing your robot with different values each time
+- Creating natural-looking behavior (like a robot that "wanders" around randomly)
+- Simulating real-world unpredictability
+
+Here's how to generate random numbers in your code:
+
+````
+
+You can see, that the output shows, the reassignments were succcessfull.
+
+Here's how to generate random numbers in your code:
 
 <img
   src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/random.png"
-  alt="Setup block with prime hub variable"
+  alt="Random number generation"
   style={{ width: "50%" }}
 />
 
@@ -178,24 +249,40 @@ from urandom import randint
 first_num = 10
 sec_num = 20
 
-
 # The main program starts here.
 print(randint(first_num, sec_num))
-```
+````
 
-Run this programm multiple times and you will see different outputs in the specified range.
+The `randint()` function picks a random integer between two values (including both the minimum and maximum). So `randint(10, 20)` will give you a random number like 10, 11, 12, 13... all the way up to 20.
 
-## More operations
+**Experiment time!** Run this program multiple times - you'll see different outputs each time! Each run might show something like:
 
-There are even more operations that pybricks support, we are not going to list all of them. The second pill that has "abs" as a default option contains many more operations you can try yourself and see if they might help you. As always when you click on the dropdown, the optiosn will be shown. But there are some, that commonly are helpfull.
+- First run: `17`
+- Second run: `12`
+- Third run: `20`
+- Fourth run: `10`
 
-For example, lets say, you want to know which of two values is the largest and you want to immediately use this value, what would you do? For this case there is a max operation and likewise a min operation.
+It's like rolling a dice, but you get to decide how many sides the dice has!
 
-Similiar, remember our special number that we returned when we divided? We can round it if we want to.
+## More Advanced Operations - Your Mathematical Toolkit
+
+Programming gives you access to many more mathematical operations beyond the basic four. In the **Math** section, you'll find a block with "abs" as the default option - click on the dropdown to see a whole menu of useful functions!
+
+Here are some commonly helpful operations:
+
+### Finding Maximum and Minimum Values
+
+Imagine you're programming a robot that needs to choose the best path, or you want to find the strongest sensor reading. The `max()` and `min()` functions are perfect for this:
+
+### Rounding Decimal Numbers
+
+Remember those decimal numbers (floats) we got from division? Sometimes you want to turn them back into whole numbers. The `round()` function is your friend here!
+
+Let's see these in action:
 
 <img
   src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/more_ops.png"
-  alt="Setup block with prime hub variable"
+  alt="Advanced mathematical operations"
   style={{ width: "50%" }}
 />
 
@@ -204,12 +291,13 @@ Similiar, remember our special number that we returned when we divided? We can r
 first_num = 10
 sec_num = 20
 
-
 # The main program starts here.
 print(max(first_num, sec_num))
 print(min(first_num, sec_num))
 print(round(first_num / 2))
 ```
+
+The output is:
 
 ```
 20
@@ -217,19 +305,28 @@ print(round(first_num / 2))
 5
 ```
 
-The first two outputs are expected, the larger number is sec_num, whoose value is 20, so 20 is returned. The smaller value is first_num, thus the next statement is returning 10.
+Let's break this down:
 
-When we divid 10 again by 2, we previously returned 5.0, a float. But now we round it, and this operation makes a back to a integer.
+- `max(10, 20)` returns `20` - the larger of the two numbers
+- `min(10, 20)` returns `10` - the smaller of the two numbers
+- `round(10 / 2)` first calculates `10 / 2 = 5.0`, then rounds it to `5` (turning the float back into an integer)
 
-Also note here, we nested the division pill inside the round pill. This is of course possible will operations. As long as they return something, the value can be further used in surrounding operations.
+### Understanding Order of Operations - Nesting Functions
 
-This also teaches us something very important about the order of execution. Code is executed from the most inner code, and then subsquently passed to its next outer layer. So first the division happens, passes down 5.0 to the round function which then returns 5.
+Here's something really cool about programming: you can put operations inside other operations! This is called "nesting," and it works just like parentheses in math.
 
-Lets make a even more complex example to really drive down this point:
+Notice in the last example how we wrote `round(first_num / 2)`. The computer has to work from the inside out:
+
+1. First, it calculates `first_num / 2` (which gives us `5.0`)
+2. Then, it passes that result to the `round()` function
+3. Finally, `round(5.0)` gives us `5`
+
+Let's try a more complex example to really understand this concept:
+Let's try a more complex example to really understand this concept:
 
 <img
   src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/order_of_op.png"
-  alt="Setup block with prime hub variable"
+  alt="Complex nested operations showing order of execution"
   style={{ width: "100%" }}
 />
 
@@ -240,22 +337,60 @@ from umath import ceil
 first_num = 10
 sec_num = 20
 
-
 # The main program starts here.
 print(max(round(first_num / 2) + 10, ceil(sec_num / 3)))
 print(min(round(first_num / 2) + 10, ceil(sec_num / 3)))
 ```
 
-The output is:
+Whoa! That looks complicated, but let's break it down step by step. The computer works from the innermost parentheses outward:
+
+**For the first print statement:**
+
+1. **Calculate `first_num / 2`**: `10 / 2 = 5.0`
+2. **Round it**: `round(5.0) = 5`
+3. **Add 10**: `5 + 10 = 15`
+4. **Calculate `sec_num / 3`**: `20 / 3 = 6.666...`
+5. **Ceiling it** (round up): `ceil(6.666...) = 7`
+6. **Find the maximum**: `max(15, 7) = 15`
+
+**For the second print statement:**
+
+- Same calculations as above, but then find the minimum: `min(15, 7) = 7`
+
+The output confirms our step-by-step analysis:
 
 ```
 15
 7
 ```
 
-(Explain step for step the order of operation and why this returns this way)
+This demonstrates how powerful nesting can be - you can build complex calculations by combining simple operations, just like building with LEGO blocks!
 
-## Summary
+## Summary - Your Number Mastery Journey
 
-You can of course do even more complex math here, and if you want just explore the functions, try values, print the statement etc.
-The most important take aways are, summarize...
+Congratulations! You've just learned the fundamental building blocks of working with numbers in programming. Let's recap what you now know:
+
+**The Basics:**
+
+- Numbers can represent counts, measurements, angles, speeds, and timing in your robot programs
+- There are two types: integers (whole numbers) and floats (decimal numbers)
+- Division always returns a float, even when the result could be a whole number
+
+**Arithmetic Operations:**
+
+- You can add (+), subtract (-), multiply (\*), and divide (/) just like in math class
+- Operations don't change the original variables unless you explicitly assign the result back
+- You can use both literal numbers (like `10`) and variables (like `first_num`) in calculations
+
+**Advanced Tools:**
+
+- Random numbers add unpredictability and fun to your programs
+- Functions like `max()`, `min()`, and `round()` solve common programming problems
+- You can nest operations inside each other for complex calculations
+
+**The Big Picture:**
+Think of numbers as the language your robot uses to understand "how much" and "how many." Whether you're telling it to move 50 centimeters, turn 90 degrees, or wait 3 seconds, numbers are how you communicate precise instructions.
+
+As you continue your programming journey, you'll discover that numbers are everywhere - from simple counting to complex calculations that help your robot navigate the world. The key is to start simple and build up your skills step by step.
+
+**Next up:** We'll explore how to make decisions with numbers using comparisons and boolean logic. Get ready to teach your robot how to choose between different actions based on what it observes!
