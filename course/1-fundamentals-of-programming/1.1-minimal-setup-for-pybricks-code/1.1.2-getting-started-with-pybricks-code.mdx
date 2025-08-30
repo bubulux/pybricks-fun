@@ -3,3 +3,204 @@ import { Meta } from "@storybook/addon-docs/blocks";
 <Meta title="1. Fundamentals of Programming/1.1 Minimal setup for Pybricks Code/1.1.2 Getting Started with Pybricks Code" />
 
 # 1.1.2 Getting Started with Pybricks Code
+
+Important note: The entire tutorial is based around the blocks editor which requires a valid liscence. Either get a liscenec or follow along using the native python editor. Code examples as blocks and as written code will always be provided.
+
+## Connecting a Prime Hub
+
+First go to [Pybricks Code](https://code.pybricks.com/) and follow the instructions there to setup your Prime Hub. You will usually need to install a specific driver for windows and also update the firmware for the robot.
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/firmware.png"
+  alt="Menu"
+  style={{ width: "25%" }}
+/>
+
+Click on "Install Pybricks Frimware" and follow the instruction from here. Return once setup.
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/firmware_setup.png"
+  alt="Firmware"
+  style={{ width: "30%" }}
+/>
+
+After you have done the setup connect, the hub to pybricks code using the bluetooth button:
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/connect.png"
+  alt="Bluetooth Button"
+  style={{ width: "25%" }}
+/>
+
+Once this is done, we can finnaly start writing our first python programm. Note that in general, a python programm is not required to run via this kind of setup. We are just doing this, because pybricks allows us to quickly have a enviroment with a output console, without further setup. But pybricks code can only run a programm via a connected Hub, thats why we went throug this hassel.
+
+Note, that this also would work with any other hub and you can do the entire fundamentals course for programming with any valid hub.
+
+## Hello World
+
+We will write now a very common programm, a so called "Hello World" programm. This is a very simple programm that outputs the message hello world to the console, lets write it to verify that our setup works properly and you know the drill for the future programms.
+
+### Create a file
+
+First you need to create a file (explain what a file is). Click on the plus icon and give it the name hello_world:
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/file_create_ic.png"
+  alt="Firmware"
+  style={{ width: "30%" }}
+/>
+
+Then create a file. Depending on the liscnec and preference you have, choose either the block based editor or the python code editor. We will provide examples for both and show you in both cases how write the programm:
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/file_create.png"
+  alt="Firmware"
+  style={{ width: "50%" }}
+/>
+
+When you created a block file you will see this:
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/hello_world_bare.png"
+  alt="Firmware"
+  style={{ width: "25%" }}
+/>
+
+Note you will see much more in the
+
+```python
+print('Hello, Pybricks!')
+```
+
+This is actually already our entire programm, lets continue first to understand what is what.
+
+Note: When you create a regular python file, the boilerplate looks like this:
+
+```python
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase
+from pybricks.tools import wait, StopWatch
+
+hub = PrimeHub()
+
+```
+
+You can safely delete everything in here and just use the provided code snippets.
+
+### The Setup block
+
+Even if you dont follow along with the block builder interface, it is usefull to think about the following concepts in terms of blocks. Each has its own "responsibility" in the entire programm.
+
+The "Setup" block, is the place where we configure all sorts of Devices and also Variables (something important for a later chapter).
+
+For the fundamentals part of the course we theoretically dont need to configure devices, but as is we have to use the Hub anyways to run our code, we might as well add it as an example.
+
+Klick on the lef sidebar on the grey area that says "Setup".
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/find_hub.png"
+  alt="Firmware"
+  style={{ width: "25%" }}
+/>
+
+Find your hub, in our case its the "prime hub". Click and Drag it onto the canvas below the setup block, it will make a click noise (like lego) once done.
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/use_hub.png"
+  alt="Firmware"
+  style={{ width: "25%" }}
+/>
+
+Your programm should look like this:
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/hello_world_hub.png"
+  alt="Firmware"
+  style={{ width: "25%" }}
+/>
+
+```python
+from pybricks.hubs import PrimeHub
+
+# Set up all devices.
+prime_hub = PrimeHub()
+
+# The main program starts here.
+print('Hello, Pybricks!')
+```
+
+Thats it you successfully setup your prime hub in this setup block. We will not use it further for this section of the course, but you might see it here and there. In general you can ignore it...
+
+### The Programm Block
+
+The programm block is the section of the programm where our actuall logic lives.
+
+It currently only contains a "print" statement, but later it will contain much more of these kinds of statements that will create more complex programms.
+
+Like we added the previous prie hub block, we can also add blocks in a similiar fashion here. Removing is possible by holding the given block (white border appears) and pressing delete or draging it into the sidepanel.
+
+As an example, remove the current print blocks (however you like).
+
+Then klick the blue output option in the sidebar and scroll completely down:
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/print.png"
+  alt="Firmware"
+  style={{ width: "50%" }}
+/>
+
+Drag it into the program block. Click where it says "abc" You can now type in any message you like. But lets type for our test cases: "Hello World"
+
+<img src="/res/hello_world.png" alt="Firmware" style={{ width: "25%" }} />
+
+```python
+from pybricks.hubs import PrimeHub
+
+# Set up all devices.
+prime_hub = PrimeHub()
+
+# The main program starts here.
+print('Hello World')
+```
+
+Thats it, now we want to run it and see the output. First you probably need to to show the console. Its a little hidden, you need to pull up this slider:
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/console.png"
+  alt="Firmware"
+  style={{ width: "50%" }}
+/>
+
+Then you should see a black canvas like this:
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/console-up.png"
+  alt="Firmware"
+  style={{ width: "50%" }}
+/>
+
+Now run the programm using the play button:
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/run_button.png"
+  alt="Firmware"
+  style={{ width: "50%" }}
+/>
+
+If everything works out fine, your output should look like this:
+
+<img
+  src="/1-fundamentals-of-programming/1.1-minimal-setup-for-pybricks-code/res/output.png"
+  alt="Firmware"
+  style={{ width: "50%" }}
+/>
+
+Congrats you just ran you first python programm...
+
+### Extra Note for native python code (give it a better name probably)
+
+1. The kids see import statements, explain what this is -> whats a library, examplain pybricks is library
+2. Why can we just use "print" -> explain its parts of the standard python library
+3. What are the green letters, why is there a # alsways prependend -> explain syntax highlithgin and comments, note they wil see many of these and should always read them
