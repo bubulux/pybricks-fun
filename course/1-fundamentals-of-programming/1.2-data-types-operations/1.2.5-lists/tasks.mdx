@@ -1,0 +1,397 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.5 Lists/1.2.5.2 Tasks" />
+
+# 1.2.5.2 Lists - Tasks
+
+Below are practice tasks based only on the material covered so far: variables, numbers, strings, booleans, and lists (constructors, indexing, length, range, unpacking). We'll provide a separate solutions article later — try these on your own first.
+
+Rules:
+
+- The tasks can be solved with the things you have learned so far.
+- You can use everything from the Variables, Numbers, Strings, Booleans, and Lists sections
+- But you cannot use anything else from other sections (like control flow, loops, etc.)
+
+---
+
+## Easy
+
+### Implement
+
+#### 1. Create a simple list
+
+Goal: Create a list with three sensor readings: 25, 30, and 28. Print the entire list.
+
+Expected output:
+
+```
+[25, 30, 28]
+```
+
+#### 2. Get list length
+
+Goal: Create a list of robot tasks: ["startup", "scan", "move", "stop"]. Print the number of tasks.
+
+Expected output:
+
+```
+4
+```
+
+#### 3. Access first element
+
+Goal: Create a list of coordinates [100, 50, 25] and print the first coordinate (x-position).
+
+Expected output:
+
+```
+100
+```
+
+### Predict
+
+#### 4. List indexing
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-1.1.png"
+  alt="List indexing prediction"
+  style={{ width: "50%" }}
+/>
+
+```python
+colors = ["red", "green", "blue"]
+print(colors[0])
+print(colors[2])
+print(len(colors))
+```
+
+#### 5. Range constructor
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-1.2.png"
+  alt="Range constructor prediction"
+  style={{ width: "50%" }}
+/>
+
+```python
+numbers = range(4)
+print(numbers)
+speeds = range(10, 30, 5)
+print(speeds)
+```
+
+#### 6. Mixed data types
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-1.3.png"
+  alt="Mixed data types prediction"
+  style={{ width: "50%" }}
+/>
+
+```python
+robot_info = ["Robot-01", 85, True]
+print(robot_info[0])
+print(robot_info[1])
+print(len(robot_info))
+```
+
+---
+
+## Medium
+
+### Implement
+
+#### 7. Update list element
+
+Goal: Create a battery level list [75, 80, 65]. Update the third battery level to 90 and print the updated list.
+
+Expected output:
+
+```
+[75, 80, 90]
+```
+
+#### 8. Range with custom step
+
+Goal: Create a range from 0 to 20 with steps of 4. Convert to list and print it.
+
+Expected output:
+
+```
+[0, 4, 8, 12, 16]
+```
+
+#### 9. Unpack coordinates
+
+Goal: Create a position list [150, 75, 30]. Unpack it to variables x, y, z and print each coordinate separately.
+
+Expected output:
+
+```
+150
+75
+30
+```
+
+### Predict
+
+#### 10. List modification
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-2.1.png"
+  alt="List modification prediction"
+  style={{ width: "75%" }}
+/>
+
+```python
+temperatures = [22, 25, 28]
+print(temperatures)
+temperatures[1] = 30
+print(temperatures)
+print(len(temperatures))
+```
+
+#### 11. Range with negative step
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-2.2.png"
+  alt="Range with negative step prediction"
+  style={{ width: "75%" }}
+/>
+
+```python
+countdown = range(5, 0, -1)
+print(countdown)
+zero_to_ten = range(11)
+print(len(zero_to_ten))
+```
+
+#### 12. Complex unpacking
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-2.3.png"
+  alt="Complex unpacking prediction"
+  style={{ width: "75%" }}
+/>
+
+```python
+sensor_data = [25, "active", True]
+temp = 0
+status = ""
+online = False
+temp, status, online = sensor_data
+print(temp)
+print(status)
+print(online)
+```
+
+---
+
+## Hard
+
+### Implement
+
+#### 13. Multi-step list operations
+
+Goal: Create a waypoint list [10, 25, 40]. Update the second waypoint to 35, then print the first waypoint and the list length.
+
+Expected output:
+
+```
+10
+3
+```
+
+#### 14. Range calculation
+
+Goal: Create a range from 50 to 100 with steps of 15. Find the length of this range and print both the list and its length.
+
+Expected output:
+
+```
+[50, 65, 80, 95]
+4
+```
+
+#### 15. Coordinate manipulation
+
+Goal: Create coordinates [200, 150, 100]. Unpack to x, y, z. Update the original list's y-coordinate (index 1) to the x value. Print the updated list.
+
+Expected output:
+
+```
+[200, 200, 100]
+```
+
+### Predict
+
+#### 16. Advanced list operations
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-3.1.png"
+  alt="Advanced list operations prediction"
+  style={{ width: "100%" }}
+/>
+
+```python
+data = [5, 10, 15, 20]
+data[2] = data[0] + data[1]
+print(data)
+print(data[2] == 15)
+print(len(data) > 3)
+```
+
+#### 17. Range edge cases
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-3.2.png"
+  alt="Range edge cases prediction"
+  style={{ width: "100%" }}
+/>
+
+```python
+empty_range = range(0)
+print(len(list(empty_range)))
+single_range = range(1)
+print(list(single_range))
+reverse_range = range(3, 0, -2)
+print(list(reverse_range))
+```
+
+#### 18. Multiple unpacking
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-3.3.png"
+  alt="Multiple unpacking prediction"
+  style={{ width: "100%" }}
+/>
+
+```python
+rgb1 = [255, 128, 0]
+rgb2 = [0, 255, 128]
+r1 = g1 = b1 = 0
+r2 = g2 = b2 = 0
+r1, g1, b1 = rgb1
+r2, g2, b2 = rgb2
+print(r1 + r2)
+print(g1 == g2)
+```
+
+---
+
+## Challenge
+
+### Implement
+
+#### 19. Robot status system
+
+Goal: Create a status list ["Robot-01", 85, "active", True]. Update the battery level (index 1) to 92 and the status (index 2) to "charging". Print the robot ID and the updated list length.
+
+Expected output:
+
+```
+Robot-01
+4
+```
+
+#### 20. Sensor array processing
+
+Goal: Create three temperature readings [22, 25, 28]. Create another list with the same values using range and list operations. Compare the first elements of both lists and print if they're equal.
+
+Expected output:
+
+```
+True
+```
+
+#### 21. Complex coordinate system
+
+Goal: Create a 3D position [100, 200, 50]. Unpack to x, y, z. Create a new list with z, x, y (rotated order). Print the original first coordinate and new list's first coordinate.
+
+Expected output:
+
+```
+100
+50
+```
+
+### Predict
+
+#### 22. Ultimate list challenge
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-4.1.png"
+  alt="Ultimate list challenge prediction"
+  style={{ width: "100%" }}
+/>
+
+```python
+matrix = [1, 2, 3]
+matrix[1] = matrix[0] * matrix[2]
+x = y = z = 0
+x, y, z = matrix
+new_matrix = [z, y, x]
+print(matrix)
+print(new_matrix)
+print(len(matrix) == len(new_matrix))
+```
+
+#### 23. Range arithmetic
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-4.2.png"
+  alt="Range arithmetic prediction"
+  style={{ width: "100%" }}
+/>
+
+```python
+steps = range(2, 10, 2)
+print(steps)
+doubled = []
+doubled = [steps[0] * 2, steps[1] * 2, steps[2] * 2, steps[3] * 2]
+print(doubled)
+print(len(steps) == len(doubled))
+```
+
+#### 24. Complex data flow
+
+What will this code print?
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/PRED-4.3.png"
+  alt="Complex data flow prediction"
+  style={{ width: "100%" }}
+/>
+
+```python
+sensors = ["temp", "humidity", "pressure"]
+values = [25, 60, 1013]
+combined = [sensors[0], values[0], sensors[1], values[1]]
+print(len(combined))
+sensor_name = status_value = ""
+sensor_name, status_value = combined[0], combined[1]
+print(sensor_name)
+print(status_value)
+```
