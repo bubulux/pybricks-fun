@@ -17,6 +17,7 @@ Before we dive in, let's locate where all the number magic happens. In the Pybri
 />
 
 This is your mathematical toolbox - we'll be using it a lot!
+We will concern ourselves with the first, second and fourth pill. The third pill, is used for custom math functions, which we won't cover here.
 
 ## What Are Numbers in Programming?
 
@@ -178,8 +179,6 @@ But what if you DO want to change a variable's value based on a calculation? Tha
 
 Let's say we want to add 10 to our variable, then divide the result by 2. We can do this step by step:
 
-Let's say we want to add 10 to our variable, then divide the result by 2. We can do this step by step:
-
 <img
   src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbers/res/print_arith_reassign.png"
   alt="Reassigning variables with arithmetic operations"
@@ -230,8 +229,6 @@ Random numbers are perfect for:
 
 Here's how to generate random numbers in your code:
 
-````
-
 You can see, that the output shows, the reassignments were succcessfull.
 
 Here's how to generate random numbers in your code:
@@ -251,7 +248,7 @@ sec_num = 20
 
 # The main program starts here.
 print(randint(first_num, sec_num))
-````
+```
 
 The `randint()` function picks a random integer between two values (including both the minimum and maximum). So `randint(10, 20)` will give you a random number like 10, 11, 12, 13... all the way up to 20.
 
