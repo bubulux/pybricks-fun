@@ -390,7 +390,8 @@ sensors = ["temp", "humidity", "pressure"]
 values = [25, 60, 1013]
 combined = [sensors[0], values[0], sensors[1], values[1]]
 print(len(combined))
-sensor_name = status_value = ""
+sensor_name = ""
+status_value = ""
 sensor_name, status_value = combined[0], combined[1]
 print(sensor_name)
 print(status_value)
