@@ -14,23 +14,24 @@ This document defines the requirements and conventions for images in the Pybrick
 ## Image Placement Rules
 
 ### Before Every Code Block
-```mdx
+
+````mdx
 <!-- CORRECT: Image immediately before code -->
-<img
-  src="/path/to/image.png"
-  alt="Descriptive alt text"
-  style={{ width: "50%" }}
-/>
+
+<img src="/path/to/image.png" alt="Descriptive alt text" style={{ width: "50%" }} />
 
 ```python
 code_here()
 ```
+````
 
 <!-- INCORRECT: Code without preceding image -->
+
 ```python
 code_here()
 ```
-```
+
+````
 
 ### No Exceptions
 - **Index articles**: Every code example needs an image
@@ -55,7 +56,7 @@ Use descriptive names that reflect the content:
 - **Format**: `PRED-X.Y.png`
 - **X**: Difficulty level (1=Easy, 2=Medium, 3=Hard, 4=Challenge)
 - **Y**: Sequential number within that difficulty's predict tasks
-- **Examples**: 
+- **Examples**:
   - `PRED-1.1.png` - Easy difficulty, first predict task
   - `PRED-2.3.png` - Medium difficulty, third predict task
   - `PRED-4.2.png` - Challenge difficulty, second predict task
@@ -82,15 +83,17 @@ Use descriptive names that reflect the content:
   alt="Descriptive alternative text"
   style={{ width: "appropriate%" }}
 />
-```
+````
 
 ### Width Guidelines
+
 - **Simple examples**: 25% - 50%
 - **Standard examples**: 50%
 - **Complex examples**: 75%
 - **Very complex examples**: 100%
 
 ### Alt Text Standards
+
 - **Descriptive**: Explain what the blocks show
 - **Concise**: Brief but informative
 - **Contextual**: Relevant to the surrounding content
@@ -121,12 +124,14 @@ course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.X-topic/
 ## Image Content Requirements
 
 ### What Images Should Show
+
 1. **Complete block structure**: Full visual representation of the code
 2. **Proper organization**: Blocks arranged as they would be in editor
 3. **Clear readability**: High resolution, clear text
 4. **Correct implementation**: Matches the accompanying code exactly
 
 ### Visual Standards
+
 - **Resolution**: High enough for clear reading
 - **Contrast**: Good visibility of text and blocks
 - **Cropping**: Focused on relevant blocks, minimal extra space
@@ -135,38 +140,44 @@ course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.X-topic/
 ## Usage by File Type
 
 ### index.mdx (Main Articles)
+
 - **Policy**: Image before EVERY code block
 - **Purpose**: Show students how to build each example
 - **Naming**: Descriptive names reflecting content
 - **Context**: Educational examples and demonstrations
 
 ### tasks.mdx (Practice Tasks)
+
 - **Implement tasks**: NO images (would reveal solutions)
 - **Predict tasks**: Images REQUIRED (students need visual reference)
 - **Naming**: PRED-X.Y.png format
 - **Context**: Testing comprehension and prediction skills
 
-### solutions.mdx (Solution Guide)  
+### solutions.mdx (Solution Guide)
+
 - **Implement solutions**: Images REQUIRED (show how to build)
 - **Predict solutions**: NO additional images (reference task images)
-- **Naming**: SOL-X.Y.png format  
+- **Naming**: SOL-X.Y.png format
 - **Context**: Teaching correct implementation patterns
 
 ## Quality Checklist
 
 ### Image Technical Quality
+
 - [ ] High resolution and clarity
 - [ ] Proper cropping and framing
 - [ ] Consistent visual style
 - [ ] Accurate representation of code
 
 ### Implementation Quality
+
 - [ ] Every code block has preceding image
 - [ ] Correct naming convention used
 - [ ] Appropriate width percentage
 - [ ] Descriptive alt text provided
 
 ### Content Quality
+
 - [ ] Image exactly matches code
 - [ ] Proper block organization
 - [ ] Educational value clear
@@ -186,6 +197,7 @@ course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.X-topic/
 ## Maintenance Guidelines
 
 ### When Adding New Content
+
 1. Create code block
 2. Generate corresponding block image
 3. Add image with proper naming and placement
@@ -193,6 +205,7 @@ course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.X-topic/
 5. Test display and accessibility
 
 ### When Updating Existing Content
+
 1. Update code as needed
 2. Regenerate corresponding block image
 3. Verify naming conventions still apply
@@ -200,6 +213,7 @@ course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.X-topic/
 5. Check all references and links
 
 ### File Organization
+
 - Keep all images in topic's `res/` directory
 - Use consistent naming across similar content
 - Document special cases or exceptions

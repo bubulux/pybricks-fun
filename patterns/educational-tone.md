@@ -9,6 +9,7 @@ See: `course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbe
 ## Target Audience Voice
 
 ### Primary Characteristics
+
 - **Age-appropriate**: Written for middle and high school students (12-18)
 - **Encouraging**: Builds confidence and motivation
 - **Conversational**: Friendly, approachable, not academic
@@ -16,6 +17,7 @@ See: `course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbe
 - **Progressive**: Builds complexity without overwhelming
 
 ### Tone Attributes
+
 - **Enthusiastic**: "Welcome to the wonderful world of..."
 - **Supportive**: "Great job!", "Perfect!", "You've got this!"
 - **Curious**: "Can you guess what happens next?"
@@ -25,6 +27,7 @@ See: `course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbe
 ## Language Patterns
 
 ### Opening Phrases
+
 - "Welcome to the [exciting/wonderful/amazing] world of..."
 - "Let's dive into..."
 - "Here's where things get really [interesting/powerful/cool]..."
@@ -32,6 +35,7 @@ See: `course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbe
 - "This is where [topic] becomes really useful..."
 
 ### Transitions
+
 - "Here's where things get really powerful..."
 - "Now let's try something more interesting..."
 - "Building on what we just learned..."
@@ -39,6 +43,7 @@ See: `course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbe
 - "Time to put this knowledge to work..."
 
 ### Encouragement
+
 - "Congratulations! You've just learned..."
 - "Perfect! Your robot now knows..."
 - "Excellent work!"
@@ -46,6 +51,7 @@ See: `course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbe
 - "See how powerful this is?"
 
 ### Interactive Elements
+
 - "Before you run this, take a moment to predict..."
 - "Can you guess what this will print?"
 - "What do you think will happen when..."
@@ -55,6 +61,7 @@ See: `course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbe
 ## Analogy and Metaphor Patterns
 
 ### Effective Analogies
+
 - **Light switches**: For boolean True/False concepts
 - **Cooking ingredients**: For variables and values
 - **Toolbox**: For programming concepts and operations
@@ -63,6 +70,7 @@ See: `course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbe
 - **Keys and locks**: For conditional logic
 
 ### Analogy Structure
+
 ```
 Think of [programming concept] like [familiar object/situation].
 
@@ -72,7 +80,9 @@ For example, [specific programming example] is like [specific familiar example].
 ```
 
 ### Robotics Connections
+
 Every concept should connect to robotics:
+
 - **Variables**: "like labeled boxes that hold information about your robot"
 - **Numbers**: "tell your robot exactly what to do - how far, how fast, how long"
 - **Booleans**: "help your robot make yes/no decisions"
@@ -81,6 +91,7 @@ Every concept should connect to robotics:
 ## Explanation Patterns
 
 ### Concept Introduction
+
 1. **Hook**: Engaging opening that sparks interest
 2. **Analogy**: Familiar comparison to build understanding
 3. **Definition**: Clear, simple explanation
@@ -88,6 +99,7 @@ Every concept should connect to robotics:
 5. **Connection**: How this helps with robot programming
 
 ### Code Explanation
+
 1. **Setup**: "Let's start with a simple example..."
 2. **Prediction**: "Before you run this, what do you think will happen?"
 3. **Execution**: "Let's see what actually happens..."
@@ -95,6 +107,7 @@ Every concept should connect to robotics:
 5. **Insight**: "This teaches us that..."
 
 ### Progressive Complexity
+
 1. **Foundation**: "Now that you understand the basics..."
 2. **Building**: "Let's combine this with what we learned earlier..."
 3. **Application**: "Here's how this works in a real robot scenario..."
@@ -103,18 +116,21 @@ Every concept should connect to robotics:
 ## Question and Interaction Patterns
 
 ### Prediction Questions
+
 - "What do you think this code will print?"
 - "Before running this, write down your prediction..."
 - "Can you trace through this step by step?"
 - "What would happen if we changed [X] to [Y]?"
 
 ### Reflection Questions
+
 - "Why do you think the output was [result]?"
 - "How is this similar to [previous concept]?"
 - "When might your robot need to do this?"
 - "What other robotics applications can you think of?"
 
 ### Challenge Questions
+
 - "What would happen if you used [different value]?"
 - "How could you modify this for [different scenario]?"
 - "Can you predict the output without running the code?"
@@ -123,18 +139,21 @@ Every concept should connect to robotics:
 ## Concept Connection Patterns
 
 ### Building on Previous Knowledge
+
 - "Remember when we learned about [previous topic]?"
 - "Just like we saw with [earlier example]..."
 - "This builds on the [concept] we covered earlier..."
 - "You'll recognize this pattern from [previous section]..."
 
 ### Connecting to Real World
+
 - "Imagine your robot needs to [scenario]..."
 - "This is like when you [familiar activity]..."
 - "In real robotics competitions, you might [application]..."
 - "Professional robot programmers use this to [purpose]..."
 
 ### Forward Looking
+
 - "This foundation will help us when we learn [future topic]..."
 - "Coming up, we'll see how to use this for [application]..."
 - "Next, we'll explore how [current topic] connects to [next topic]..."
@@ -143,18 +162,21 @@ Every concept should connect to robotics:
 ## Error and Misconception Handling
 
 ### Addressing Confusion
+
 - "If this seems confusing, don't worry - it takes practice!"
 - "A common question students ask is..."
 - "This might look strange at first, but here's why..."
 - "Don't be surprised if [unexpected result] happens..."
 
 ### Explaining Unexpected Results
+
 - "You might wonder why [result] instead of [expectation]..."
 - "This is actually helpful because [explanation]..."
 - "The computer is being precise by [behavior]..."
 - "This teaches us an important lesson about [concept]..."
 
 ### Debugging Mindset
+
 - "When something doesn't work as expected..."
 - "Let's trace through this step by step..."
 - "A good strategy is to [debugging approach]..."
@@ -163,18 +185,21 @@ Every concept should connect to robotics:
 ## Summary and Wrap-up Patterns
 
 ### Section Summaries
+
 - "Let's recap what you now know..."
 - "You've just mastered [concept list]..."
 - "The key takeaways from this section are..."
 - "Now you can [new capabilities]..."
 
 ### Achievement Recognition
+
 - "Congratulations! You've just learned [achievement]..."
 - "You now have the power to [capability]..."
 - "Your robot programming skills just leveled up!"
 - "You're well on your way to [goal]..."
 
 ### Forward Momentum
+
 - "Next up, we'll explore [next topic]..."
 - "Get ready to discover [upcoming concept]..."
 - "Now that you understand [current], you're ready for [next]..."
@@ -183,6 +208,7 @@ Every concept should connect to robotics:
 ## Voice Consistency Guidelines
 
 ### Do Use
+
 - **Second person**: "you" and "your robot"
 - **Active voice**: "You create variables" not "Variables are created"
 - **Present tense**: "This shows how..." not "This showed how..."
@@ -190,8 +216,9 @@ Every concept should connect to robotics:
 - **Positive framing**: Focus on what students can do
 
 ### Avoid
+
 - **Academic jargon**: Technical terms without explanation
-- **Passive voice**: "It is understood that..." 
+- **Passive voice**: "It is understood that..."
 - **Complex sentences**: Long, convoluted explanations
 - **Negative framing**: "You can't" or "This won't work"
 - **Overwhelming detail**: Too much information at once
@@ -199,12 +226,14 @@ Every concept should connect to robotics:
 ## Accessibility and Inclusion
 
 ### Language Accessibility
+
 - **Clear, simple sentences**: Easy to parse and understand
 - **Defined terminology**: Explain new terms when introduced
 - **Consistent vocabulary**: Use same terms for same concepts
 - **Cultural neutrality**: Examples that work across cultures
 
 ### Learning Style Support
+
 - **Visual learners**: Images and diagrams
 - **Kinesthetic learners**: Hands-on coding examples
 - **Auditory learners**: Clear verbal explanations

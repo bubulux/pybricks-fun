@@ -15,6 +15,7 @@ See: `course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbe
 ## Article Structure
 
 ### 1. Header and Introduction
+
 ```mdx
 import { Meta } from "@storybook/addon-docs/blocks";
 
@@ -22,16 +23,18 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # 1.2.X.1 Topic Name - Introduction
 
-Welcome to the [engaging opening that connects to real-world robotics]! 
+Welcome to the [engaging opening that connects to real-world robotics]!
 [Brief explanation of how this topic relates to robot programming]
 ```
 
 ### 2. Finding the UI Panel
+
 - Always show students where to find relevant blocks in Pybricks Code Editor
 - Include screenshot with specific panel highlighted
 - Use consistent image styling: `style={{ width: "50%" }}`
 
 ### 3. What Are [Topic] in Programming?
+
 - Start with relatable analogies (cooking ingredients, light switches, etc.)
 - Provide 5-7 real-world robotics examples
 - Connect abstract concepts to concrete robot behaviors
@@ -42,6 +45,7 @@ Welcome to the [engaging opening that connects to real-world robotics]!
 Each major concept follows this pattern:
 
 #### Section Header with Clear Purpose
+
 - **Interactive opening**: "Let's start with a simple example..."
 - **Prediction elements**: "Before you run this, take a moment to predict..."
 - **Code example with image**: Every code block MUST have preceding img tag
@@ -49,12 +53,9 @@ Each major concept follows this pattern:
 - **Concept reinforcement**: "This teaches us..."
 
 #### Code Block Format
-```mdx
-<img
-  src="/path/to/screenshot.png"
-  alt="Descriptive alt text"
-  style={{ width: "appropriate%" }}
-/>
+
+````mdx
+<img src="/path/to/screenshot.png" alt="Descriptive alt text" style={{ width: "appropriate%" }} />
 
 ```python
 # Initialize variables (when needed)
@@ -63,12 +64,15 @@ variable_name = value
 # The main program starts here
 code_example()
 ```
+````
 
 Expected output:
+
 ```
 actual_output_here
 ```
-```
+
+````
 
 ### 5. Progressive Complexity
 
@@ -105,11 +109,12 @@ Congratulations! You've just learned [brief recap]. Let's recap what you now kno
 [Connect to overall programming/robotics context]
 
 **Next up:** [Preview of next topic and how it builds on this one]
-```
+````
 
 ## Educational Tone Guidelines
 
 ### Voice and Style
+
 - **Conversational**: Use "you" and "your robot"
 - **Encouraging**: "Congratulations!", "Perfect!", "Great job!"
 - **Analogical**: Connect abstract concepts to familiar objects
@@ -117,6 +122,7 @@ Congratulations! You've just learned [brief recap]. Let's recap what you now kno
 - **Interactive**: Frequent questions and predictions
 
 ### Language Patterns
+
 - **Opening sections**: "Welcome to the [exciting/wonderful] world of..."
 - **Transitions**: "Here's where things get really [powerful/interesting]..."
 - **Explanations**: "Think of it like..." followed by analogy
@@ -124,6 +130,7 @@ Congratulations! You've just learned [brief recap]. Let's recap what you now kno
 - **Concept reinforcement**: "This shows how..."
 
 ### Technical Explanations
+
 - **Start simple**: Basic concept first
 - **Add complexity**: Build on previous knowledge
 - **Use analogies**: Real-world comparisons
@@ -133,6 +140,7 @@ Congratulations! You've just learned [brief recap]. Let's recap what you now kno
 ## Image Requirements
 
 Every code block must have an accompanying image:
+
 - **Placement**: Immediately before the code block
 - **Naming**: Descriptive and consistent (e.g., `base.png`, `print_arith.png`)
 - **Alt text**: Descriptive of the visual content
@@ -142,16 +150,19 @@ Every code block must have an accompanying image:
 ## Code Examples Standards
 
 ### Comments
+
 - `# Initialize variables.` (when setting up variables)
 - `# The main program starts here.` (before main logic)
 - Inline comments explaining complex operations
 
 ### Variable Naming
+
 - Descriptive names: `battery_level`, `sensor_reading`, `robot_speed`
 - Consistent with robotics context
 - Clear purpose and meaning
 
 ### Output Format
+
 - Always show expected output after code
 - Use proper formatting with code blocks
 - Explain unexpected results (like 5.0 vs 5)
@@ -159,11 +170,13 @@ Every code block must have an accompanying image:
 ## Connection Patterns
 
 ### To Previous Topics
+
 - "Remember from the [Variables section](../link/)"
 - "Just like we learned with..."
 - "Building on what we know about..."
 
 ### To Robotics Applications
+
 - Battery management examples
 - Sensor reading scenarios
 - Motor control situations
@@ -171,6 +184,7 @@ Every code block must have an accompanying image:
 - Navigation decisions
 
 ### To Next Topics
+
 - "Next up, we'll explore..."
 - "This foundation will help us..."
 - "Get ready to learn..."

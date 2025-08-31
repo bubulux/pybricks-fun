@@ -9,20 +9,23 @@ See: `course/1-fundamentals-of-programming/1.2-data-types-operations/1.2.2-numbe
 ## Overall Structure
 
 Each topic has exactly **24 tasks** organized as:
+
 - **Easy**: 6 tasks (3 implement + 3 predict)
-- **Medium**: 6 tasks (3 implement + 3 predict)  
+- **Medium**: 6 tasks (3 implement + 3 predict)
 - **Hard**: 6 tasks (3 implement + 3 predict)
 - **Challenge**: 6 tasks (3 implement + 3 predict)
 
 ## Task Types
 
 ### Implement Tasks
+
 - **Purpose**: Students write code to solve a problem
 - **Image policy**: **NO img tags** (would be spoilers)
 - **Structure**: Goal description + expected output only
 - **Numbering**: Sequential within each difficulty level
 
-### Predict Tasks  
+### Predict Tasks
+
 - **Purpose**: Students predict output of given code
 - **Image policy**: **MUST have img tags** (students need visual representation)
 - **Structure**: Question + img + code block
@@ -39,10 +42,11 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # Topic - Tasks
 
-Below are practice tasks based only on the material covered so far: [list relevant topics]. 
+Below are practice tasks based only on the material covered so far: [list relevant topics].
 We'll provide a separate solutions article later — try these on your own first.
 
 Rules:
+
 - The tasks can be solved with the things you have learned so far.
 - You can use everything from the [relevant] sections
 - But you cannot use anything else from other sections (like control flow, loops, etc.)
@@ -59,7 +63,9 @@ Goal: [Clear description of what to build]
 
 Expected output:
 ```
+
 expected_result_here
+
 ```
 
 #### 2. [Task Name]
@@ -68,7 +74,9 @@ Goal: [Clear description of what to build]
 
 Expected output:
 ```
+
 expected_result_here
+
 ```
 
 #### 3. [Task Name]
@@ -77,8 +85,10 @@ Goal: [Clear description of what to build]
 
 Expected output:
 ```
+
 expected_result_here
-```
+
+````
 
 ### Predict
 
@@ -94,16 +104,16 @@ What will this code print?
 
 ```python
 code_to_predict_here
-```
+````
 
 #### 5. [Task Name]
 
 What will this code print?
 
 <img
-  src="/path/to/res/PRED-1.2.png"
-  alt="Descriptive prediction alt text"  
-  style={{ width: "appropriate%" }}
+src="/path/to/res/PRED-1.2.png"
+alt="Descriptive prediction alt text"  
+ style={{ width: "appropriate%" }}
 />
 
 ```python
@@ -115,9 +125,9 @@ code_to_predict_here
 What will this code print?
 
 <img
-  src="/path/to/res/PRED-1.3.png"
-  alt="Descriptive prediction alt text"
-  style={{ width: "appropriate%" }}
+src="/path/to/res/PRED-1.3.png"
+alt="Descriptive prediction alt text"
+style={{ width: "appropriate%" }}
 />
 
 ```python
@@ -131,23 +141,29 @@ code_to_predict_here
 ### Implement
 
 #### 7. [Task Name]
+
 [Same pattern as Easy, but more complex]
 
 #### 8. [Task Name]
+
 [Same pattern as Easy, but more complex]
 
 #### 9. [Task Name]
+
 [Same pattern as Easy, but more complex]
 
 ### Predict
 
 #### 10. [Task Name]
+
 [Same pattern as Easy, with PRED-2.X.png images]
 
 #### 11. [Task Name]
+
 [Same pattern as Easy, with PRED-2.X.png images]
 
 #### 12. [Task Name]
+
 [Same pattern as Easy, with PRED-2.X.png images]
 
 ---
@@ -157,23 +173,29 @@ code_to_predict_here
 ### Implement
 
 #### 13. [Task Name]
+
 [Same pattern, more sophisticated problems]
 
 #### 14. [Task Name]
+
 [Same pattern, more sophisticated problems]
 
 #### 15. [Task Name]
+
 [Same pattern, more sophisticated problems]
 
 ### Predict
 
 #### 16. [Task Name]
+
 [Same pattern as Easy, with PRED-3.X.png images]
 
 #### 17. [Task Name]
+
 [Same pattern as Easy, with PRED-3.X.png images]
 
 #### 18. [Task Name]
+
 [Same pattern as Easy, with PRED-3.X.png images]
 
 ---
@@ -183,24 +205,31 @@ code_to_predict_here
 ### Implement
 
 #### 19. [Task Name]
+
 [Advanced real-world scenarios]
 
 #### 20. [Task Name]
+
 [Advanced real-world scenarios]
 
 #### 21. [Task Name]
+
 [Advanced real-world scenarios]
 
 ### Predict
 
 #### 22. [Task Name]
+
 [Complex prediction scenarios with PRED-4.X.png images]
 
 #### 23. [Task Name]
+
 [Complex prediction scenarios with PRED-4.X.png images]
 
 #### 24. [Task Name]
+
 [Complex prediction scenarios with PRED-4.X.png images]
+
 ```
 
 ## Difficulty Progression
@@ -210,7 +239,7 @@ code_to_predict_here
 - **Predict**: Simple, single-operation code
 - **Goals**: Build familiarity and confidence
 
-### Medium (Tasks 7-12)  
+### Medium (Tasks 7-12)
 - **Implement**: Combining 2-3 concepts, real-world scenarios
 - **Predict**: Multi-step operations, variable interactions
 - **Goals**: Apply knowledge in practical contexts
@@ -233,7 +262,7 @@ code_to_predict_here
 - **Y**: Task number within that difficulty's predict section
 - **Example**: `PRED-2.3.png` = Medium difficulty, 3rd predict task
 
-### Implementation Task Images  
+### Implementation Task Images
 - **Policy**: **NO IMAGES** in tasks.mdx
 - **Rationale**: Would reveal the solution structure
 - **Exception**: Only in solutions.mdx with `SOL-X.Y.png` format
@@ -254,7 +283,7 @@ code_to_predict_here
 
 ### Context Themes
 - **Battery management**: Levels, charging, power saving
-- **Sensor readings**: Distance, color, pressure detection  
+- **Sensor readings**: Distance, color, pressure detection
 - **Motor control**: Speed, direction, timing
 - **Safety systems**: Multiple condition checking
 - **Navigation**: Position, obstacles, pathfinding
@@ -276,7 +305,7 @@ code_to_predict_here
 ## Quality Checklist
 
 - [ ] Exactly 24 tasks total (6 per difficulty level)
-- [ ] 3 implement + 3 predict per difficulty level  
+- [ ] 3 implement + 3 predict per difficulty level
 - [ ] No img tags on implement tasks
 - [ ] All predict tasks have img tags with correct PRED-X.Y.png naming
 - [ ] Sequential task numbering (1-24)
@@ -286,3 +315,4 @@ code_to_predict_here
 - [ ] Realistic, educational code for predict tasks
 - [ ] Expected outputs provided for implement tasks
 - [ ] Robotics context maintained throughout
+```
