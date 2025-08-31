@@ -1,7 +1,343 @@
 import { Meta } from "@storybook/addon-docs/blocks";
 
-<Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.5 Lists" />
+<Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.5 Lists/1.2.5.1 Introduction" />
 
-# 1.2.5 Lists
+# 1.2.5.1 Lists - Introduction
 
-This section covers list data types and list operations in Python.
+Welcome to the amazing world of lists! If variables are like boxes that hold one thing, and strings are like chains of letters, then lists are like treasure chests that can hold many different items all at once. Lists are one of the most powerful tools in programming!
+
+## What Are Lists?
+
+Think of a list like a backpack or toolbox for your robot. Just as you might pack multiple tools for different jobs, a list lets your robot carry multiple pieces of data together. A list can hold:
+
+- **Multiple sensor readings**: [25, 30, 28, 32] (temperature readings over time)
+- **Robot coordinates**: [100, 50, 75] (x, y, z positions)
+- **Color sequences**: ["red", "blue", "green", "yellow"] (colors detected by a sensor)
+- **Mixed data**: ["Robot-01", 85, "ready", True] (robot ID, battery level, status, operational)
+
+Lists are incredibly useful in robotics because robots often need to work with collections of data - multiple sensor readings, coordinate points for navigation, sequences of commands, or lists of tasks to complete.
+
+## Finding List Blocks in Pybricks
+
+In the Pybricks Code Editor, list operations are found in the green **Data** section under **Lists and Text**. You'll find several different blocks for working with lists:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/LISTS-overview.png"
+  alt="List blocks in Pybricks Code Editor"
+  style={{ width: "75%" }}
+/>
+
+Each block has a specific purpose, and we'll explore them one by one. Lists might seem complex at first, but once you understand each piece, they become incredibly powerful tools for your robot!
+
+## List Literal (Constructor) - Creating Lists
+
+The most fundamental operation is creating a list. In Pybricks, you'll find a green pill block with the text "list with (...)" that allows you to define a list with specific values.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/LIST-1.1.png"
+  alt="List literal constructor block"
+  style={{ width: "50%" }}
+/>
+
+This block is like filling up your robot's backpack with specific items. You can extend the number of elements by adjusting the block options. If you want to add more space to list click the right white chevron symbol on the block. If you want to remove elements, click the left white chevron symbol.
+
+Let's see this in action with some robot examples:
+
+```python
+# Initialize variables.
+sensor_readings = [25, 30, 28, 32]
+robot_position = [100, 50, 75]
+detected_colors = ["red", "blue"]
+
+# The main program starts here.
+print(sensor_readings)
+print(robot_position)
+print(detected_colors)
+```
+
+Output:
+
+```
+[25, 30, 28, 32]
+[100, 50, 75]
+['red', 'blue']
+```
+
+Notice how lists are displayed with square brackets `[]` and items separated by commas. This is Python's way of showing you what's inside the list.
+
+## Range Constructor - Creating Number Sequences
+
+Sometimes you need a list of consecutive numbers, like counting from 0 to 10. The range constructor makes this easy! You'll find a green pill block labeled "range" with different options.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/LIST-2.1.png"
+  alt="Range constructor basic"
+  style={{ width: "50%" }}
+/>
+
+### Simple Range: range(n)
+
+The simplest form creates numbers from 0 up to (but not including) n:
+
+```python
+# Initialize variables.
+countdown_steps = range(5)
+
+# The main program starts here.
+print(countdown_steps)
+```
+
+Output:
+
+```
+[0, 1, 2, 3, 4]
+```
+
+### Advanced Range: range(start, stop, step)
+
+For more control, you can specify exactly where to start, where to stop, and how big each step should be:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/LIST-2.2.png"
+  alt="Range constructor advanced"
+  style={{ width: "75%" }}
+/>
+
+```python
+# Initialize variables.
+motor_speeds = range(10, 100, 10)  # From 10 to 100, step by 10
+backward_count = range(10, 0, -1)  # From 10 down to 1
+
+# The main program starts here.
+print(motor_speeds)
+print(backward_count)
+```
+
+Output:
+
+```
+[10, 20, 30, 40, 50, 60, 70, 80, 90]
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+```
+
+This is incredibly useful for creating smooth acceleration curves, countdown timers, or any sequence of numbers your robot needs.
+
+## Length of List - Counting Elements
+
+Your robot often needs to know "how many items are in this list?" The length block answers this question instantly.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/LIST-3.1.png"
+  alt="Length of list block"
+  style={{ width: "50%" }}
+/>
+
+Think of this like asking "how many tools are in my toolbox?" or "how many waypoints do I need to visit?"
+
+```python
+# Initialize variables.
+waypoints = [10, 25, 40, 55, 70]
+detected_objects = ["box", "ball", "cup"]
+sensor_history = [22, 25, 23, 26, 24, 25, 27]
+
+# The main program starts here.
+print("Waypoints to visit:", len(waypoints))
+print("Objects detected:", len(detected_objects))
+print("Sensor readings collected:", len(sensor_history))
+```
+
+Output:
+
+```
+Waypoints to visit: 5
+Objects detected: 3
+Sensor readings collected: 7
+```
+
+This information helps your robot make decisions like "Do I have enough data?" or "Have I completed all tasks?"
+
+## Get List Element - Accessing Specific Items
+
+Sometimes your robot needs to look at just one specific item from the list. The "get element" pill lets you peek into any position in the list.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/LIST-4.1.png"
+  alt="Get list element block"
+  style={{ width: "50%" }}
+/>
+
+**Important**: Lists use "zero-based indexing," which means the first item is at position 0, the second at position 1, and so on. Think of it like house numbers starting from 0 instead of 1.
+
+Pybricks offers also further shorthands:
+
+**Value at index**: Directly get the value at a specific index. If you specifiy 0 then its the first value, if you specifiy 1 then its the second value, and so on. If you specifiy -1 then its the last value, if you specifiy -2 then its the second last value, and so on.
+
+**first value**: Directly get the first value of the list (same as index 0).
+
+**last value**: Directly get the last value of the list (same as index -1).
+
+**random value**: Directly get a random value from the list.
+
+```python
+from urandom import choice
+
+# Initialize variables.
+robot_tasks = ["startup", "scan area", "pick object", "return home"]
+
+# The main program starts here.
+print(robot_tasks[1])
+print(robot_tasks[0])
+print(robot_tasks[-1])
+print(choice(robot_tasks))
+```
+
+Output:
+
+```
+scan area
+startup
+return home
+// can vary
+```
+
+This is like telling your robot "get the third tool from your toolbox" or "what's the next waypoint to visit?"
+
+## Set List Element - Updating Specific Items
+
+Your robot can also change specific items in a list without affecting the others. The "set element" block is like reaching into your toolbox and replacing one tool with another.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/LIST-5.1.png"
+  alt="Set list element block"
+  style={{ width: "75%" }}
+/>
+
+```python
+# Initialize variables.
+battery_levels = [85, 90, 75, 80]
+
+# The main program starts here.
+print("Before update:", battery_levels)
+
+# Update the third robot's battery level (position 2)
+battery_levels[2] = 95
+
+print("After update:", battery_levels)
+```
+
+Output:
+
+```
+Before update: [85, 90, 75, 80]
+After update: [85, 90, 95, 80]
+```
+
+This is perfect for updating sensor readings, modifying coordinates, or changing the status of items in your robot's task list.
+
+## Unpack List - Spreading Items to Variables
+
+Sometimes you want to take a list and spread its contents into separate variables. The unpack block is like taking items out of a bag and putting them into individual labeled boxes.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/LIST-6.1.png"
+  alt="Unpack list block"
+  style={{ width: "75%" }}
+/>
+
+**Important**: The variables must be initialized beforehand - you need to create the "labeled boxes" before you can put items in them.
+
+```python
+# Initialize variables.
+robot_position = [150, 75, 30]
+x_coord = 0  # Must initialize before unpacking
+y_coord = 0  # Must initialize before unpacking
+z_coord = 0  # Must initialize before unpacking
+
+# The main program starts here.
+print("Position as list:", robot_position)
+
+# Unpack the position into separate coordinates
+x_coord, y_coord, z_coord = robot_position
+
+print("X coordinate:", x_coord)
+print("Y coordinate:", y_coord)
+print("Z coordinate:", z_coord)
+```
+
+Output:
+
+```
+Position as list: [150, 75, 30]
+X coordinate: 150
+Y coordinate: 75
+Z coordinate: 30
+```
+
+This is incredibly useful for robotics when you need to work with coordinates, RGB color values, or any grouped data that you want to use separately.
+
+## Real-World Robot Scenarios
+
+Let's put it all together with some practical examples that show how lists make robotics programming more powerful:
+
+### Sensor Data Collection
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/LIST-7.1.png"
+  alt="Sensor data collection example"
+  style={{ width: "100%" }}
+/>
+
+```python
+# Initialize variables.
+temperature_readings = []  # Start with empty list
+new_reading = 23
+
+# The main program starts here.
+# Add readings to our list (we'll learn append later)
+temperature_readings = [22, 25, 23, 26, 24]
+
+print("Total readings:", len(temperature_readings))
+print("First reading:", temperature_readings[0])
+print("Latest reading:", temperature_readings[4])
+```
+
+### Navigation Waypoints
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.5-lists/res/LIST-7.2.png"
+  alt="Navigation waypoints example"
+  style={{ width: "100%" }}
+/>
+
+```python
+# Initialize variables.
+waypoint_x = [0, 50, 100, 150]
+waypoint_y = [0, 25, 50, 75]
+current_waypoint = 0
+
+# The main program starts here.
+print("Total waypoints:", len(waypoint_x))
+print("Current target X:", waypoint_x[current_waypoint])
+print("Current target Y:", waypoint_y[current_waypoint])
+
+# Move to next waypoint
+current_waypoint = 1
+print("Next target X:", waypoint_x[current_waypoint])
+print("Next target Y:", waypoint_y[current_waypoint])
+```
+
+## What Makes Lists Powerful?
+
+Lists are powerful because they let your robot:
+
+1. **Store multiple related items together** - like all sensor readings or all waypoints
+2. **Access any item instantly** - get the 5th reading or the 3rd waypoint
+3. **Update specific items** - change one reading without affecting others
+4. **Count items easily** - know how much data you have
+5. **Process items systematically** - work through items one by one (more on this in control flow!)
+
+## What's Next?
+
+You've just learned the building blocks of working with lists! In the next sections, we'll explore how to use these list operations with control flow (loops and conditions) to create even more powerful robot behaviors. We'll also learn how to add and remove items from lists, sort data, and use lists to make your robot incredibly smart and capable.
+
+Lists are like giving your robot a super-powered memory system - instead of remembering just one thing at a time, it can now remember and work with collections of related information. This opens up amazing possibilities for navigation, data collection, task management, and intelligent behavior!
