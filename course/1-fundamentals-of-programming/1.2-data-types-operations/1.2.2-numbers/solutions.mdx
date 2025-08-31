@@ -143,24 +143,24 @@ Code:
 ```python
 a = 5
 b = 2
-print(a + b * 2)
 print((a + b) * 2)
+print((a * b) + 2)
 ```
 
 Step-by-step:
 
-- `a + b * 2` follows normal arithmetic precedence: multiplication before addition.
-  - `b * 2` → 2 \* 2 = 4
-  - `a + 4` → 5 + 4 = 9
-- `(a + b) * 2` forces the addition first:
+- `(a + b) * 2` forces the addition inside parentheses first:
   - `a + b` → 5 + 2 = 7
   - `7 * 2` → 14
+- `(a * b) + 2` forces the multiplication inside parentheses first:
+  - `a * b` → 5 \* 2 = 10
+  - `10 + 2` → 12
 
 Predicted output:
 
 ```
-9
 14
+12
 ```
 
 #### 6. Predict: reassign vs. expression — code and derivation
