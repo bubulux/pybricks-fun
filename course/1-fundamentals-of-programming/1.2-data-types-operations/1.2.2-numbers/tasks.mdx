@@ -17,11 +17,11 @@ Rules:
 
 ## Easy — (Practice reading and printing numbers)
 
-### 1. Print two variables
+Implement (write code):
 
-Goal: Create two variables named `a` and `b` that hold the numbers 7 and 13, then display both values so that each appears on its own line.
+1. Print two variables
 
-Hint: You will need a way to define values and a way to show them to the console.
+Goal: Store the numbers 7 and 13 in two variables and display each on its own line.
 
 Expected output:
 
@@ -30,11 +30,9 @@ Expected output:
 13
 ```
 
-### 2. Add two numbers and show the result
+2. Add two numbers and show the result
 
-Goal: Have two values (4 and 6) and produce their sum on the screen.
-
-Hint: Think about how to combine the two numbers into a single result and then display it.
+Goal: Combine the values 4 and 6 and display their total.
 
 Expected output:
 
@@ -42,11 +40,9 @@ Expected output:
 10
 ```
 
-### 3. Subtract and show both values
+3. Subtract and show both values
 
-Goal: Use two values (20 and 5). First display the result of subtracting the second from the first, then display the original first value again to prove it was not changed by the operation.
-
-Hint: Perform the subtraction and then display both the result and the original variable.
+Goal: Use two values (20 and 5). First display the result of subtracting the second from the first, then display the original first value again to prove it was not changed.
 
 Expected output:
 
@@ -55,41 +51,51 @@ Expected output:
 20
 ```
 
-### 4. Multiply and divide
+Predict (read the code and write down the output before running):
 
-Goal: With two numbers (3 and 4), display their product and then the result of dividing the second by the first.
+4. Predict: basic arithmetic
 
-Hint: One result will likely be a decimal number — that's okay.
+Code:
 
-Expected output:
-
+```python
+# predict the output
+x = 2
+y = 3
+print(x + y)
+print(x * y)
 ```
-12
-1.3333333333333333
+
+5. Predict: order of operations
+
+Code:
+
+```python
+a = 5
+b = 2
+print(a + b * 2)
+print((a + b) * 2)
 ```
 
-### 5. Simple reassign
+6. Predict: reassign vs. expression
 
-Goal: Start with a value called `score` equal to 5. Increase it by 10 and display the new value; then decrease it by 3 and display the result again.
+Code:
 
-Hint: Remember that to change a stored value you assign a new value to the same variable name.
-
-Expected output:
-
-```
-15
-12
+```python
+v = 10
+print(v)
+print(v + 5)
+print(v)
 ```
 
 --
 
 ## Medium — (Using arithmetic in assignments and `randint`)
 
-### 1. Average of two numbers
+Implement (write code):
 
-Goal: Use two stored numbers (8 and 12) to compute their average and display it. The result should be a decimal number.
+1. Average of two numbers
 
-Hint: Combine the numbers with arithmetic, then make sure to divide appropriately.
+Goal: Use two stored numbers (8 and 12) to compute and display their average.
 
 Expected output:
 
@@ -97,11 +103,9 @@ Expected output:
 10.0
 ```
 
-### 2. Add then divide (chained reassign)
+2. Add then divide (chained reassign)
 
-Goal: Begin with a number `value = 9`. Show its value, then increase it by 11 and show it again, then divide the new value by 4 and show the final result.
-
-Hint: Print after each step to show the changes.
+Goal: Begin with a number `value = 9`. Show the value, add 11 and show the new value, then divide that new value by 4 and show the final result.
 
 Expected output:
 
@@ -111,48 +115,55 @@ Expected output:
 5.0
 ```
 
-### 3. Random pick within a range
+3. Random pick within a range
 
-Goal: Simulate a dice roll by producing a random integer between 1 and 6. Run your program several times to see different results.
-
-Hint: Use the random integer function available in the lessons; make the range inclusive of both ends.
+Goal: Produce a random integer between 1 and 6 (inclusive). Run several times to observe different results.
 
 Expected output: any integer between `1` and `6` (inclusive).
 
-### 4. Find larger and smaller
+Predict (read the code and write down the output before running):
 
-Goal: Given two values (17 and 9), display the larger and the smaller one.
+4. Predict: chaining arithmetic
 
-Hint: Think about how to pick the maximum and minimum values without loops.
+Code:
 
-Expected output:
-
+```python
+n = 4
+n = n * 3
+n = n + 2
+print(n)
 ```
-17
-9
+
+5. Predict: division and float
+
+Code:
+
+```python
+num = 7
+print(num / 2)
+print(num // 2)  # integer division may not be supported in the simplified editor; think about what the editor expects
 ```
 
-### 5. Chain arithmetic into assignment
+6. Predict: max/min combination
 
-Goal: Start with `n = 4`. Update `n` so that it's multiplied by 3 and then increased by 2; finally display the new `n`.
+Code:
 
-Hint: Reassign `n` using an expression that uses the previous value of `n`.
-
-Expected output:
-
-```
-14
+```python
+a = 17
+b = 9
+print(max(a, b))
+print(min(a, b))
 ```
 
 --
 
 ## Hard — (Nested operations and combining techniques)
 
-### 1. Nested operations
+Implement (write code):
 
-Goal: With `a = 10` and `b = 20`, compute a result that chooses the larger of two expressions: one expression is the rounded value of `a / 2` plus 5, the other is the rounded or ceilinged value of `b / 3` plus 1. Display the final chosen number and add a short comment explaining the order of operations you used.
+1. Nested calculation and round
 
-Hint: Build each inner calculation first in your head (or in a temporary variable), then combine them with the function that chooses the larger value.
+Goal: Starting with `a = 10`, compute `(a / 2)`, round that result, add 5, and display the final number.
 
 Expected output:
 
@@ -160,13 +171,11 @@ Expected output:
 15
 ```
 
-### 2. Leaderboard gap
+2. Leaderboard gap
 
-Goal: You have three scores: 12, 18 and 15. Display the top score, then display the second-highest score, and finally display how many points the second-highest would need to match the top.
+Goal: Given three scores 12, 18 and 15, display the top score, the second-highest and how many points the second-highest needs to reach the top.
 
-Hint: You may use `max` and `min` together in a clever way to isolate the second place without sorting.
-
-Expected output (for these values):
+Expected output:
 
 ```
 18
@@ -174,11 +183,9 @@ Expected output (for these values):
 3
 ```
 
-### 3. Reassign using previous result
+3. Reassign and round final
 
-Goal: Start from `value = 7`. First show the initial value. Then update `value` to be `(value + 5) * 2`, show it, then divide this result by 3 and show the rounded final value.
-
-Hint: Use parentheses when you need a specific order of operations.
+Goal: Start with `value = 7`. Update it to `(value + 5) * 2`, then divide by 3 and show the rounded result. Print each step.
 
 Expected output:
 
@@ -188,26 +195,51 @@ Expected output:
 8
 ```
 
-### 4. Randomized reassign game
+Predict (read the code and write down the output before running):
 
-Goal: Start at zero and perform three random point additions. After each random pick (between 1 and 10) add it to the running total and display the updated total.
+4. Predict: very complex nested assignment (derivation required)
 
-Hint: Reassign the total after each random draw and print it each time.
+Code:
 
-Expected output: three increasing integers; each line is the new total (values will vary).
+```python
+from umath import ceil
 
-### 5. Compose a final expression
+a = 11
+b = 6
+c = 4
 
-Goal: With three numbers `a = 5`, `b = 12`, `c = 3`, compute a single result by multiplying `a` and `b`, dividing by `c`, rounding that division, and then adding the largest of the three original numbers. Do this in one assignment and display the final value. Add a short comment explaining why parentheses were necessary.
-
-Hint: Decide which operations must happen first and use parentheses to enforce that order.
-
-Expected output:
-
+# compute several nested expressions and combine them
+part1 = round(a / 2) + max(b, c)
+part2 = ceil(b / 3) + min(a, c)
+final = max(part1 * 2 - 3, part2 + 4) + round((a + b) / c)
+print(final)
 ```
-27
+
+Task: Without running the code, derive the value that `final` will print. Show your step-by-step reasoning on paper or in comments, then run the code to check.
+
+5. Predict: nested math with reassignment
+
+Code:
+
+```python
+x = 5
+x = x * 2 + 3
+print(x)
+print(x / 4)
+```
+
+6. Predict: combine round, max and arithmetic
+
+Code:
+
+```python
+a = 5
+b = 12
+c = 3
+result = round((a * b) / c) + max(a, b, c)
+print(result)
 ```
 
 --
 
-If you want more practice after these, tell me and I'll create a solutions article plus a few extension challenges that introduce comparisons and booleans next.
+When you finish these exercises, I can produce a solutions article with full code and step-by-step explanations. Ask for "solutions" when you're ready.
