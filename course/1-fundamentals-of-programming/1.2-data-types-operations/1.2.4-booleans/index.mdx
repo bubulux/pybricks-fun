@@ -1,8 +1,8 @@
 import { Meta } from "@storybook/addon-docs/blocks";
 
-<Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.3 Booleans/1.2.3.1 Introduction" />
+<Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.4 Booleans/1.2.4.1 Introduction" />
 
-# 1.2.3.1 Booleans - Introduction
+# 1.2.4.1 Booleans - Introduction
 
 Welcome to the exciting world of True and False - the foundation of all decision-making in programming! If numbers tell your robot "how much" and "how many," booleans tell your robot "yes or no" and help it make smart choices.
 
@@ -11,7 +11,7 @@ Welcome to the exciting world of True and False - the foundation of all decision
 The **Logic** section is the also found in the green **Data** section of the Pybricks Code Editor, its the secon subsection called **Logic**:
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.6.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-1.6.png"
   alt="Logic panel in Pybricks Code Editor"
   style={{ width: "50%" }}
 />
@@ -40,7 +40,7 @@ Booleans are like your robot's way of answering simple yes/no questions about th
 Let's start with a simple example to see booleans in action. We'll print the two basic boolean values to see what they look like:
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.6.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-1.6.png"
   alt="Boolean literals True and False"
   style={{ width: "50%" }}
 />
@@ -66,7 +66,7 @@ Remember how we used arithmetic operations with numbers? Well, booleans come fro
 
 Think of comparisons like a judge in a competition. The judge looks at two contestants and decides: "Is contestant A better than contestant B?" The answer is always yes (True) or no (False).
 
-In the purple **Logic** section, you'll find the comparison block. This block lets you ask questions like "Is 5 greater than 3?" or "Is 10 equal to 10?"
+In the green **Data** section, you'll find the comparison block. This block lets you ask questions like "Is 5 greater than 3?" or "Is 10 equal to 10?"
 
 Here are the comparison symbols you can use:
 
@@ -80,7 +80,7 @@ Here are the comparison symbols you can use:
 Let's see these in action:
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.1.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-1.1.png"
   alt="Comparison operations"
   style={{ width: "50%" }}
 />
@@ -116,7 +116,7 @@ How did you do? Let's break down each comparison:
 Just like with arithmetic operations, you can use variables in comparisons too! Let's create some variables and compare them:
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-2.1.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-2.1.png"
   alt="Using variables in comparisons"
   style={{ width: "50%" }}
 />
@@ -149,6 +149,91 @@ False
 
 This shows how your robot can check its own status and make decisions based on what it finds!
 
+## Boolean Operations with Strings
+
+Booleans aren't just for numbers - they work amazingly well with text (strings) too! Your robot can ask questions about text just like it asks questions about numbers.
+
+### String Comparisons
+
+You can compare strings using the same operators you use with numbers. This is incredibly useful for robot commands, status messages, and decision-making:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-STR-1.png"
+  alt="String comparison operations"
+  style={{ width: "50%" }}
+/>
+
+```python
+# The main program starts here.
+robot_status = "ready"
+command = "start"
+
+print(robot_status == "ready")    # Is the robot ready?
+print(command == "stop")          # Is the command to stop?
+print(robot_status != "error")    # Is the robot NOT in error state?
+```
+
+This gives us:
+
+```
+True
+False
+True
+```
+
+### The 'in' Operator - Text Detective Work
+
+Here's one of the most powerful tools for working with strings: the `in` operator. It checks if one piece of text exists inside another piece of text. Think of it like a detective looking for clues!
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-STR-2.png"
+  alt="String 'in' operator"
+  style={{ width: "50%" }}
+/>
+
+```python
+# The main program starts here.
+print('a' in 'abc')           # Is 'a' found in 'abc'?
+print('robot' in 'My robot is awesome')  # Is 'robot' in the sentence?
+print('xyz' in 'abc')         # Is 'xyz' found in 'abc'?
+```
+
+The output is:
+
+```
+True
+True
+False
+```
+
+This is incredibly useful for robotics! Imagine your robot receiving commands or status messages:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-STR-3.png"
+  alt="Practical string operations for robotics"
+  style={{ width: "75%" }}
+/>
+
+```python
+# The main program starts here.
+sensor_data = "temperature: 25C, battery: 85%"
+error_message = "sensor error detected"
+
+print("battery" in sensor_data)    # Check if battery info is present
+print("error" in error_message)    # Check if there's an error
+print("25" in sensor_data)         # Check for specific temperature
+```
+
+Output:
+
+```
+True
+True
+True
+```
+
+Your robot can now understand and react to text-based information! This opens up amazing possibilities for communication and decision-making.
+
 ## Logical Operations - Combining Questions
 
 Sometimes your robot needs to ask more complex questions that involve multiple conditions. This is like asking "Is it sunny AND warm?" or "Is the battery low OR is there an obstacle ahead?"
@@ -160,7 +245,7 @@ That's where logical operations come in! They let you combine True/False values 
 The **AND** operation is like a very picky judge. It only says True if BOTH conditions are True. Think of it like needing both a key AND a password to open a safe.
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.4.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-1.4.png"
   alt="Logical AND operation"
   style={{ width: "50%" }}
 />
@@ -187,7 +272,7 @@ False
 The **OR** operation is much more generous. It says True if at least ONE condition is True. Think of it like having multiple keys - if any one of them works, you can open the door!
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-2.2.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-2.2.png"
   alt="Logical OR operation"
   style={{ width: "50%" }}
 />
@@ -216,7 +301,7 @@ Only when BOTH sides are False does OR give you False.
 Here's where things get really powerful! You can combine comparisons using AND and OR to ask complex questions:
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-2.3.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-2.3.png"
   alt="Combining comparisons with logical operations"
   style={{ width: "75%" }}
 />
@@ -267,7 +352,7 @@ This shows how your robot can make intelligent decisions based on multiple facto
 Sometimes you want to flip a boolean value - turn True into False, or False into True. That's what the **NOT** operation does. It's like a switch that reverses whatever you give it.
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.5.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-1.5.png"
   alt="NOT operation"
   style={{ width: "50%" }}
 />
@@ -299,7 +384,7 @@ Sometimes you want your robot to choose between two values based on a True/False
 The ternary operator (also called conditional expression) lets you do exactly this in one line:
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.3.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-1.3.png"
   alt="Ternary conditional expression"
   style={{ width: "50%" }}
 />
@@ -335,7 +420,7 @@ This pattern is perfect for making quick either/or decisions in your robot progr
 Here's something really cool: you can chain multiple comparisons together, just like in math class when you write "1 < x < 10"!
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.2.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-1.2.png"
   alt="Chained comparisons"
   style={{ width: "50%" }}
 />
@@ -371,7 +456,7 @@ This is perfect for checking if sensor readings are within acceptable ranges!
 Sometimes in programming, you need to represent "nothing" or "no value yet." That's where **None** comes in. Think of it like an empty box - it's not True or False, it's just... nothing.
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-2.4.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-2.4.png"
   alt="Working with None values"
   style={{ width: "50%" }}
 />
@@ -429,5 +514,3 @@ Congratulations! You've just learned the fundamental building blocks of decision
 Think of booleans as your robot's decision-making brain. Every time your robot needs to choose what to do next - turn left or right, speed up or slow down, continue or stop - it uses boolean logic to decide.
 
 As you continue your programming journey, you'll discover that booleans are the foundation of all intelligence in programming. From simple sensor checks to complex AI decisions, it all starts with True and False!
-
-**Next up:** We'll explore how to use these boolean decisions to control what your robot actually does using branching and conditional statements. Get ready to make your robot truly smart!

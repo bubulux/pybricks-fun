@@ -1,8 +1,8 @@
 import { Meta } from "@storybook/addon-docs/blocks";
 
-<Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.3 Booleans/1.2.3.3 Solutions" />
+<Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.4 Booleans/1.2.4.3 Solutions" />
 
-# 1.2.3.3 Booleans - Solutions
+# 1.2.4.3 Booleans - Solutions
 
 ---
 
@@ -13,7 +13,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
 #### 1. Print basic boolean values — solution and explanation
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.6.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/BOO-1.6.png"
   alt="Print True and False"
   style={{ width: "25%" }}
 />
@@ -41,7 +41,7 @@ False
 #### 2. Compare two numbers — solution and explanation
 
 <img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/SOL-1.2.png"
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/SOL-1.2.png"
   alt="Compare two numbers"
   style={{ width: "50%" }}
 />
@@ -200,29 +200,35 @@ Expected output:
 True
 ```
 
-#### 8. Sensor range validation — solution and explanation
+#### 8. Robot command validation — solution and explanation
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/SOL-2.2.png"
+  alt="Robot command validation"
+  style={{ width: "50%" }}
+/>
 
 Solution (code):
 
 ```python
 # Initialize variables.
-sensor_reading = 45
+command = "move forward"
 
 # The main program starts here.
-print((sensor_reading < 10) or (sensor_reading > 50))
+print(("move" in command) and ("stop" not in command))
 ```
 
 Explanation:
 
-- We check if the sensor reading (45) is outside the valid range of 10 to 50.
-- "Outside the range" means either less than 10 OR greater than 50.
-- `45 < 10` is False, and `45 > 50` is False.
-- False OR False equals False (the sensor is within range).
+- We check if the command contains "move" AND doesn't contain "stop".
+- `"move" in "move forward"` is True (the word "move" is found).
+- `"stop" not in "move forward"` is True (the word "stop" is NOT found).
+- True AND True equals True, so this is a valid movement command.
 
 Expected output:
 
 ```
-False
+True
 ```
 
 #### 9. Speed selection — solution and explanation
@@ -302,28 +308,38 @@ True
 True
 ```
 
-#### 12. Chained comparisons with variables — solution and explanation
+#### 12. String operations with booleans — solution and explanation
+
+This references the blocks shown in the predict task:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.4-booleans/res/PRED-2.3.png"
+  alt="String operations with booleans prediction"
+  style={{ width: "75%" }}
+/>
 
 Code:
 
 ```python
-min_val = 5
-sensor = 12
-max_val = 20
-print(min_val < sensor < max_val)
-print(0 <= sensor <= 10)
+robot_status = "battery low"
+error_msg = "sensor error"
+print("battery" in robot_status)
+print("low" in robot_status and "error" not in robot_status)
+print("sensor" in error_msg or "battery" in error_msg)
 ```
 
 Step-by-step analysis:
 
-- `min_val < sensor < max_val` → `5 < 12 < 20` → True (12 is between 5 and 20)
-- `0 <= sensor <= 10` → `0 <= 12 <= 10` → False (12 is not between 0 and 10)
+- `"battery" in robot_status` → `"battery" in "battery low"` → True (the word "battery" is found)
+- `"low" in robot_status and "error" not in robot_status` → `True and True` → True (has "low" and no "error")
+- `"sensor" in error_msg or "battery" in error_msg` → `True or False` → True (has "sensor" but no "battery")
 
 Expected output:
 
 ```
 True
-False
+True
+True
 ```
 
 ---
