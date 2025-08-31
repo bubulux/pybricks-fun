@@ -151,9 +151,9 @@ Code:
 
 ```python
 numbers = range(4)
-print(list(numbers))
+print(numbers)
 speeds = range(10, 30, 5)
-print(list(speeds))
+print(speeds)
 ```
 
 Step-by-step analysis:
@@ -253,14 +253,14 @@ Solution (code):
 custom_range = range(0, 20, 4)
 
 # The main program starts here.
-print(list(custom_range))
+print(custom_range)
 ```
 
 Explanation:
 
 - `range(0, 20, 4)` creates numbers from 0 up to (but not including) 20, stepping by 4.
 - This generates: 0, 4, 8, 12, 16 (stops before 20).
-- Converting to a list with `list()` allows us to see all values at once.
+- Converting to a list with `)` allow us to see all values at once.
 
 Expected output:
 
@@ -358,16 +358,16 @@ Code:
 
 ```python
 countdown = range(5, 0, -1)
-print(list(countdown))
+print(countdown)
 zero_to_ten = range(11)
-print(len(list(zero_to_ten)))
+print(len(zero_to_ten))
 ```
 
 Step-by-step analysis:
 
 - `range(5, 0, -1)` counts down from 5 to 1 (stops before 0): [5, 4, 3, 2, 1]
 - `range(11)` creates 0 through 10 (11 numbers total)
-- `len(list(zero_to_ten))` returns 11
+- `len(zero_to_ten)) returns 11
 
 Expected output:
 
@@ -465,7 +465,7 @@ Solution (code):
 ```python
 # Initialize variables.
 speed_range = range(50, 100, 15)
-speed_list = list(speed_range)
+speed_list = speed_range
 
 # The main program starts here.
 print(speed_list)
@@ -571,11 +571,11 @@ Code:
 
 ```python
 empty_range = range(0)
-print(len(list(empty_range)))
+print(len(empty_range))
 single_range = range(1)
-print(list(single_range))
+print(single_range)
 reverse_range = range(3, 0, -2)
-print(list(reverse_range))
+print(reverse_range)
 ```
 
 Step-by-step analysis:
@@ -789,7 +789,7 @@ This references the blocks shown in the predict task:
 Code:
 
 ```python
-steps = list(range(2, 10, 2))
+steps = range(2, 10, 2)
 print(steps)
 doubled = []
 doubled = [steps[0] * 2, steps[1] * 2, steps[2] * 2, steps[3] * 2]
