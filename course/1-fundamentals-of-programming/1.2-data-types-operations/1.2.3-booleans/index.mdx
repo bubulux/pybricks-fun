@@ -2,145 +2,408 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 <Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.3 Booleans/1.2.3.1 Introduction" />
 
-# 1.2.3 Booleans - Introduction
+# 1.2.3.1 Booleans - Introduction
 
-Booleans are the simplest answers a program can give: yes/no, on/off, open/closed. Yet they are also the foundation of decision-making. If numbers are the robot's measuring tools, booleans are its questions — and decisions are the answers.
+Welcome to the exciting world of True and False - the foundation of all decision-making in programming! If numbers tell your robot "how much" and "how many," booleans tell your robot "yes or no" and help it make smart choices.
 
-## Goals:
+## Finding the Logic Panel
 
-- Understand boolean values and the tiny building blocks (comparison, logical, unary, ternary).
-- Predict simple boolean expressions by hand and explain the steps.
-
-Teaching metaphor: Light switches and gates
-
-- Think of each boolean value like a light switch: True means the light is on, False means it is off.
-- Comparisons (3 < 4) are sensors that flip the switch based on a measurement.
-- Logical blocks (`and` / `or`) are gates that combine switches: `and` only turns on if both inputs are on; `or` turns on if at least one input is on.
-- Ternary conditionals are like a small question: "If the sensor is on, give me this; otherwise give me that."
-
-## 1) Comparison block — asking a question
-
-Imagine you're checking the battery level: "Is the battery less than 20%?" That is a comparison. It answers True or False.
-
-<img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.1.png"
-  alt="Comparison block: left op right"
-  style={{ width: "50%" }}
-/>
-
-```python
-# equality and inequality
-print(3 == 4)   # Is 3 equal to 4? -> False
-print(3 != 4)   # Is 3 different from 4? -> True
-
-# comparisons (greater / smaller / equal)
-print(3 < 4)    # Is 3 less than 4? -> True
-print(5 >= 5)   # Is 5 greater or equal to 5? -> True
-```
-
-Chained comparisons are like asking a multi-step question in one line — "is 3 less-or-equal 4 and 4 less-or-equal 5?"
-
-<img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.2.png"
-  alt="Chained comparison block: a <= b <= c"
-  style={{ width: "50%" }}
-/>
-
-```python
-print(3 <= 4 <= 5)  # True, because 3 <= 4 and 4 <= 5
-```
-
-Step-by-step strategy for predicting comparisons:
-
-1. Compute or read the left expression.
-2. Compute the right expression.
-3. Apply the comparison operator.
-4. If chained, check each link in the chain.
-
----
-
-## 2) Conditional expression (ternary) — a short if/else
-
-Think of this as asking "If the light is on, give me 1; otherwise give me 0." It's a short, inline choice.
-
-<img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.3.png"
-  alt="Ternary conditional block: value_if_true if condition else value_if_false"
-  style={{ width: "50%" }}
-/>
-
-Python mapping and examples:
-
-```python
-print(1 if True else 0)         # 1 because the condition is True
-print(100 if 3 < 2 else -100)   # -100 because 3 < 2 is False
-
-# nested ternary (harder to read):
-print(100 if True else (-100 if True else 0))
-```
-
-Classroom tip: Always read ternaries left-to-right: "value if condition else fallback".
-
----
-
-## 3) Logical operator block (`and` / `or`) — combining questions
-
-Gates and wiring: If you have two sensors, you might want both to be true before acting (`and`), or at least one to be true (`or`).
-
-<img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.4.png"
-  alt="Logical operator block: left and/or right"
-  style={{ width: "50%" }}
-/>
-
-```python
-print(True and False)   # False: both must be True to get True
-print(True or False)    # True: only one needs to be True
-
-# combine comparisons
-print((3 < 4) and (5 > 2))  # True because both comparisons are True
-```
-
-Short-circuit note (advanced): Python stops evaluating as soon as the result is known. For `and`, if the left side is False, Python won't evaluate the right side.
-
----
-
-## 4) Unary boolean block (`not`, `is none`, `is not none`) — flipping and checking
-
-`not` flips a switch. `is None` checks whether a slot is empty.
-
-<img
-  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.5.png"
-  alt="Unary boolean block: not / is none / is not none"
-  style={{ width: "50%" }}
-/>
-
-```python
-print(not True)        # False (flip True to False)
-
-value = None
-print(value is None)     # True
-print(value is not None) # False
-```
-
-Teacher hint: Use `is None` to test whether a variable has no value yet — it's safer than comparing to `None` with `==` in some contexts.
-
----
-
-## 5) Boolean & None literals — the ingredients
-
-These are the basic building blocks: `True`, `False`, and `None` (nothing).
+Just like we found the green **Math** section for numbers, let's locate where all the boolean magic happens. In the Pybricks Code Editor, look for the purple **Logic** section in the left sidebar:
 
 <img
   src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.6.png"
-  alt="Boolean and None literals: true, false, none"
-  style={{ width: "25%" }}
+  alt="Logic panel in Pybricks Code Editor"
+  style={{ width: "50%" }}
+/>
+
+This is your decision-making toolbox - every choice your robot makes starts here!
+
+## What Are Booleans in Programming?
+
+Think of booleans like light switches in your house. A light switch has only two positions: ON or OFF. There's no "kinda on" or "halfway off" - it's one or the other. That's exactly how booleans work!
+
+In programming, we use two special words:
+
+- **True** (like a light switch being ON)
+- **False** (like a light switch being OFF)
+
+Here are some real-world examples of what booleans represent in robotics:
+
+- **Sensor readings**: Is the robot touching something? (True or False)
+- **Battery status**: Is the battery low? (True or False)
+- **Position checks**: Has the robot reached its destination? (True or False)
+- **Color detection**: Is the detected color red? (True or False)
+- **Safety conditions**: Is it safe to move forward? (True or False)
+
+Booleans are like your robot's way of answering simple yes/no questions about the world around it.
+
+Let's start with a simple example to see booleans in action. We'll print the two basic boolean values to see what they look like:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.6.png"
+  alt="Boolean literals True and False"
+  style={{ width: "50%" }}
 />
 
 ```python
+# The main program starts here.
 print(True)
 print(False)
-print(None)
 ```
 
----
+The output should be:
+
+```
+True
+False
+```
+
+Perfect! Your robot now understands the concepts of "yes" and "no." But here's where it gets really interesting - these aren't just words, they're actual values that your robot can use to make decisions!
+
+## Comparison Operations - Asking Questions
+
+Remember how we used arithmetic operations with numbers? Well, booleans come from asking questions about numbers! When you compare two numbers, the answer is always either True or False.
+
+Think of comparisons like a judge in a competition. The judge looks at two contestants and decides: "Is contestant A better than contestant B?" The answer is always yes (True) or no (False).
+
+In the purple **Logic** section, you'll find the comparison block. This block lets you ask questions like "Is 5 greater than 3?" or "Is 10 equal to 10?"
+
+Here are the comparison symbols you can use:
+
+- `==` means "is equal to"
+- `!=` means "is not equal to"
+- `<` means "is less than"
+- `<=` means "is less than or equal to"
+- `>` means "is greater than"
+- `>=` means "is greater than or equal to"
+
+Let's see these in action:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.1.png"
+  alt="Comparison operations"
+  style={{ width: "50%" }}
+/>
+
+```python
+# The main program starts here.
+print(3 == 4)   # Is 3 equal to 4?
+print(3 != 4)   # Is 3 different from 4?
+print(3 < 4)    # Is 3 less than 4?
+print(5 >= 5)   # Is 5 greater than or equal to 5?
+```
+
+Before you run this, take a moment to predict: what do you think each line will print? Write down your guesses!
+
+The actual output is:
+
+```
+False
+True
+True
+True
+```
+
+How did you do? Let's break down each comparison:
+
+- `3 == 4` asks "Is 3 equal to 4?" Obviously not, so the answer is `False`
+- `3 != 4` asks "Is 3 different from 4?" Yes it is, so the answer is `True`
+- `3 < 4` asks "Is 3 less than 4?" Yes, so the answer is `True`
+- `5 >= 5` asks "Is 5 greater than or equal to 5?" Yes (equal counts!), so the answer is `True`
+
+### Using Variables in Comparisons
+
+Just like with arithmetic operations, you can use variables in comparisons too! Let's create some variables and compare them:
+
+```python
+# Initialize variables.
+robot_speed = 50
+max_speed = 100
+min_speed = 10
+
+# The main program starts here.
+print(robot_speed > max_speed)  # Is robot going too fast?
+print(robot_speed < min_speed)  # Is robot going too slow?
+print(robot_speed == max_speed) # Is robot at maximum speed?
+```
+
+Can you predict what this will output? The robot_speed is 50, so:
+
+- Is 50 greater than 100? `False`
+- Is 50 less than 10? `False`
+- Is 50 equal to 100? `False`
+
+Output:
+
+```
+False
+False
+False
+```
+
+This shows how your robot can check its own status and make decisions based on what it finds!
+
+## Logical Operations - Combining Questions
+
+Sometimes your robot needs to ask more complex questions that involve multiple conditions. This is like asking "Is it sunny AND warm?" or "Is the battery low OR is there an obstacle ahead?"
+
+That's where logical operations come in! They let you combine True/False values to make more sophisticated decisions.
+
+### The AND Operation
+
+The **AND** operation is like a very picky judge. It only says True if BOTH conditions are True. Think of it like needing both a key AND a password to open a safe.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.4.png"
+  alt="Logical AND operation"
+  style={{ width: "50%" }}
+/>
+
+```python
+# The main program starts here.
+print(True and True)    # Both are True
+print(True and False)   # One is True, one is False
+print(False and True)   # One is False, one is True
+print(False and False)  # Both are False
+```
+
+Can you guess the output? Remember, AND only gives True when BOTH sides are True:
+
+```
+True
+False
+False
+False
+```
+
+### The OR Operation
+
+The **OR** operation is much more generous. It says True if at least ONE condition is True. Think of it like having multiple keys - if any one of them works, you can open the door!
+
+```python
+# The main program starts here.
+print(True or True)     # Both are True
+print(True or False)    # One is True, one is False
+print(False or True)    # One is False, one is True
+print(False or False)   # Both are False
+```
+
+The OR operation gives True in most cases:
+
+```
+True
+True
+True
+False
+```
+
+Only when BOTH sides are False does OR give you False.
+
+### Combining Comparisons with Logic
+
+Here's where things get really powerful! You can combine comparisons using AND and OR to ask complex questions:
+
+```python
+# Initialize variables.
+battery_level = 75
+temperature = 25
+is_daytime = True
+
+# The main program starts here.
+print(battery_level > 50 and temperature < 30)  # Good battery AND not too hot?
+print(battery_level < 20 or temperature > 40)   # Low battery OR too hot?
+print(is_daytime and battery_level > 30)        # Daytime AND enough battery?
+```
+
+Let's trace through these step by step:
+
+1. `battery_level > 50 and temperature < 30`
+
+   - Is 75 > 50? True
+   - Is 25 < 30? True
+   - True AND True = True
+
+2. `battery_level < 20 or temperature > 40`
+
+   - Is 75 < 20? False
+   - Is 25 > 40? False
+   - False OR False = False
+
+3. `is_daytime and battery_level > 30`
+   - is_daytime is True
+   - Is 75 > 30? True
+   - True AND True = True
+
+Output:
+
+```
+True
+False
+True
+```
+
+This shows how your robot can make intelligent decisions based on multiple factors!
+
+## The NOT Operation - Flipping the Switch
+
+Sometimes you want to flip a boolean value - turn True into False, or False into True. That's what the **NOT** operation does. It's like a switch that reverses whatever you give it.
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.5.png"
+  alt="NOT operation"
+  style={{ width: "50%" }}
+/>
+
+```python
+# The main program starts here.
+print(not True)     # Flip True to False
+print(not False)    # Flip False to True
+
+# Use with comparisons
+is_moving = False
+print(not is_moving) # Is the robot NOT moving?
+```
+
+The output shows how NOT flips everything:
+
+```
+False
+True
+True
+```
+
+This is super useful for questions like "Is the robot NOT at the target?" or "Is the sensor NOT detecting anything?"
+
+## Making Choices with Booleans - The Ternary Operator
+
+Sometimes you want your robot to choose between two values based on a True/False condition. This is like saying "If it's sunny, wear sunglasses; otherwise, wear regular glasses."
+
+The ternary operator (also called conditional expression) lets you do exactly this in one line:
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.3.png"
+  alt="Ternary conditional expression"
+  style={{ width: "50%" }}
+/>
+
+```python
+# Initialize variables.
+battery_level = 30
+
+# The main program starts here.
+print(1 if True else 0)                           # Simple choice
+print("Fast" if battery_level > 50 else "Slow")  # Speed based on battery
+print(100 if 3 < 2 else -100)                    # Math condition
+```
+
+Let's read these out loud:
+
+1. "Print 1 if True, otherwise print 0" → Prints 1
+2. "Print 'Fast' if battery is over 50, otherwise print 'Slow'" → Prints "Slow" (30 is not > 50)
+3. "Print 100 if 3 < 2, otherwise print -100" → Prints -100 (3 < 2 is False)
+
+Output:
+
+```
+1
+Slow
+-100
+```
+
+This pattern is perfect for making quick either/or decisions in your robot programs!
+
+## Advanced Boolean Concepts - Chaining Comparisons
+
+Here's something really cool: you can chain multiple comparisons together, just like in math class when you write "1 < x < 10"!
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.2.png"
+  alt="Chained comparisons"
+  style={{ width: "50%" }}
+/>
+
+```python
+# Initialize variables.
+sensor_value = 45
+
+# The main program starts here.
+print(0 < sensor_value < 100)      # Is sensor value between 0 and 100?
+print(10 <= sensor_value <= 50)    # Is sensor value between 10 and 50 (inclusive)?
+print(3 <= 4 <= 5)                 # Is 4 between 3 and 5?
+```
+
+Let's trace through these:
+
+1. `0 < 45 < 100` → Is 45 between 0 and 100? True
+2. `10 <= 45 <= 50` → Is 45 between 10 and 50 (including endpoints)? True
+3. `3 <= 4 <= 5` → Is 4 between 3 and 5? True
+
+Output:
+
+```
+True
+True
+True
+```
+
+This is perfect for checking if sensor readings are within acceptable ranges!
+
+## Working with None - The "Nothing" Value
+
+Sometimes in programming, you need to represent "nothing" or "no value yet." That's where **None** comes in. Think of it like an empty box - it's not True or False, it's just... nothing.
+
+```python
+# Initialize variables.
+sensor_reading = None  # No reading yet
+
+# The main program starts here.
+print(sensor_reading)
+print(sensor_reading is None)      # Is it nothing?
+print(sensor_reading is not None)  # Is it something?
+```
+
+Output:
+
+```
+None
+True
+False
+```
+
+This is useful when your robot is waiting for sensor data or hasn't made a measurement yet.
+
+## Summary - Your Boolean Mastery Journey
+
+Congratulations! You've just learned the fundamental building blocks of decision-making in programming. Let's recap what you now know:
+
+**The Basics:**
+
+- Booleans are either True or False - like light switches that are ON or OFF
+- They represent yes/no answers that help your robot make decisions
+- Every comparison between numbers results in a boolean value
+
+**Comparison Operations:**
+
+- You can ask questions like "Is A greater than B?" using symbols like `>`, `<`, `==`, etc.
+- These comparisons always give you True or False answers
+- You can use variables in comparisons to check your robot's status
+
+**Logical Operations:**
+
+- **AND** requires both conditions to be True (picky judge)
+- **OR** only needs one condition to be True (generous judge)
+- **NOT** flips True to False and False to True (switch flipper)
+- You can combine multiple comparisons to ask complex questions
+
+**Advanced Tools:**
+
+- Ternary operators let you choose between two values based on a condition
+- Chained comparisons help you check if values are within ranges
+- None represents "nothing" and can be checked with `is None`
+
+**The Big Picture:**
+Think of booleans as your robot's decision-making brain. Every time your robot needs to choose what to do next - turn left or right, speed up or slow down, continue or stop - it uses boolean logic to decide.
+
+As you continue your programming journey, you'll discover that booleans are the foundation of all intelligence in programming. From simple sensor checks to complex AI decisions, it all starts with True and False!
+
+**Next up:** We'll explore how to use these boolean decisions to control what your robot actually does using branching and conditional statements. Get ready to make your robot truly smart!

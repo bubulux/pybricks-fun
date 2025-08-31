@@ -1,0 +1,612 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.3 Booleans/1.2.3.3 Solutions" />
+
+# 1.2.3.3 Booleans - Solutions
+
+---
+
+## Easy
+
+### Implement
+
+#### 1. Print basic boolean values — solution and explanation
+
+<img
+  src="/1-fundamentals-of-programming/1.2-data-types-operations/1.2.3-booleans/res/BOO-1.6.png"
+  alt="Print True and False"
+  style={{ width: "25%" }}
+/>
+
+Solution (code):
+
+```python
+# The main program starts here.
+print(True)
+print(False)
+```
+
+Explanation:
+
+- We use the boolean literal blocks to get the values True and False.
+- Each `print()` statement displays one boolean value on its own line.
+
+Expected output:
+
+```
+True
+False
+```
+
+#### 2. Compare two numbers — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+first_num = 15
+second_num = 20
+
+# The main program starts here.
+print(first_num > second_num)
+```
+
+Explanation:
+
+- We create two variables with the values 15 and 20.
+- The comparison `first_num > second_num` asks "Is 15 greater than 20?"
+- Since 15 is not greater than 20, the result is False.
+
+Expected output:
+
+```
+False
+```
+
+#### 3. Test equality — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+num1 = 42
+num2 = 42
+
+# The main program starts here.
+print(num1 == num2)
+```
+
+Explanation:
+
+- We create two variables with the same value (42).
+- The equality comparison `num1 == num2` asks "Are these values equal?"
+- Since both variables hold 42, the result is True.
+
+Expected output:
+
+```
+True
+```
+
+#### 4. Chain comparison — solution and explanation
+
+Solution (code):
+
+```python
+# The main program starts here.
+print(20 <= 25 <= 30)
+```
+
+Explanation:
+
+- Chained comparison checks if 25 is between 20 and 30 (inclusive).
+- This is equivalent to `(20 <= 25) and (25 <= 30)`.
+- Both parts are true, so the result is True.
+
+Expected output:
+
+```
+True
+```
+
+### Predict
+
+#### 5. Multiple comparisons — solution and explanation
+
+Code:
+
+```python
+x = 10
+y = 20
+print(x < y)
+print(x == y)
+print(x >= y)
+```
+
+Step-by-step analysis:
+
+- `x < y` → `10 < 20` → True (10 is less than 20)
+- `x == y` → `10 == 20` → False (10 is not equal to 20)
+- `x >= y` → `10 >= 20` → False (10 is not greater than or equal to 20)
+
+Expected output:
+
+```
+True
+False
+False
+```
+
+#### 6. Logical operations — solution and explanation
+
+Code:
+
+```python
+print(True and False)
+print(False or True)
+print(not True)
+print(not False)
+```
+
+Step-by-step analysis:
+
+- `True and False` → False (AND needs both to be True)
+- `False or True` → True (OR needs at least one to be True)
+- `not True` → False (NOT flips True to False)
+- `not False` → True (NOT flips False to True)
+
+Expected output:
+
+```
+False
+True
+False
+True
+```
+
+---
+
+## Medium
+
+### Implement
+
+#### 7. Battery check simulation — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+battery_level = 35
+
+# The main program starts here.
+print((battery_level > 30) and (battery_level < 80))
+```
+
+Explanation:
+
+- We check if battery level (35) is both greater than 30 AND less than 80.
+- `35 > 30` is True, and `35 < 80` is True.
+- True AND True equals True.
+
+Expected output:
+
+```
+True
+```
+
+#### 8. Sensor range validation — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+sensor_reading = 45
+
+# The main program starts here.
+print((sensor_reading < 10) or (sensor_reading > 50))
+```
+
+Explanation:
+
+- We check if the sensor reading (45) is outside the valid range of 10 to 50.
+- "Outside the range" means either less than 10 OR greater than 50.
+- `45 < 10` is False, and `45 > 50` is False.
+- False OR False equals False (the sensor is within range).
+
+Expected output:
+
+```
+False
+```
+
+#### 9. Speed selection — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+battery_level = 25
+
+# The main program starts here.
+print("Slow" if battery_level < 50 else "Fast")
+```
+
+Explanation:
+
+- The ternary operator checks if battery_level (25) is less than 50.
+- Since 25 < 50 is True, it returns the first value: "Slow".
+
+Expected output:
+
+```
+Slow
+```
+
+#### 10. Temperature and humidity check — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+temperature = 22
+humidity = 65
+
+# The main program starts here.
+print((temperature < 25) or (humidity > 70))
+```
+
+Explanation:
+
+- We check if EITHER condition is true: temperature below 25 OR humidity above 70.
+- `22 < 25` is True, and `65 > 70` is False.
+- True OR False equals True.
+
+Expected output:
+
+```
+True
+```
+
+### Predict
+
+#### 11. Complex logical expression — solution and explanation
+
+Code:
+
+```python
+a = 15
+b = 25
+c = 20
+print((a < b) and (b > c))
+print((a == 15) or (c < 10))
+print(not (a > b))
+```
+
+Step-by-step analysis:
+
+- `(a < b) and (b > c)` → `(15 < 25) and (25 > 20)` → True and True → True
+- `(a == 15) or (c < 10)` → `(15 == 15) or (20 < 10)` → True or False → True
+- `not (a > b)` → `not (15 > 25)` → not False → True
+
+Expected output:
+
+```
+True
+True
+True
+```
+
+#### 12. Chained comparisons with variables — solution and explanation
+
+Code:
+
+```python
+min_val = 5
+sensor = 12
+max_val = 20
+print(min_val < sensor < max_val)
+print(0 <= sensor <= 10)
+```
+
+Step-by-step analysis:
+
+- `min_val < sensor < max_val` → `5 < 12 < 20` → True (12 is between 5 and 20)
+- `0 <= sensor <= 10` → `0 <= 12 <= 10` → False (12 is not between 0 and 10)
+
+Expected output:
+
+```
+True
+False
+```
+
+---
+
+## Hard
+
+### Implement
+
+#### 13. Multi-condition robot status — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+battery = 45
+temperature = 28
+daylight = True
+
+# The main program starts here.
+print((battery > 40) and (temperature < 30) and daylight)
+```
+
+Explanation:
+
+- We check all three conditions: battery > 40, temperature < 30, and daylight is True.
+- `45 > 40` is True, `28 < 30` is True, and `daylight` is True.
+- True AND True AND True equals True.
+
+Expected output:
+
+```
+True
+```
+
+#### 14. Nested ternary decision — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+score = 75
+
+# The main program starts here.
+print("A" if score >= 90 else ("B" if score >= 80 else "C"))
+```
+
+Explanation:
+
+- First check: Is 75 >= 90? False, so go to the else part.
+- Second check: Is 75 >= 80? False, so return "C".
+
+Expected output:
+
+```
+C
+```
+
+#### 15. None value checking — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+my_variable = None
+
+# The main program starts here.
+print(my_variable is None)
+print(my_variable is not None)
+```
+
+Explanation:
+
+- `my_variable is None` checks if the variable equals None → True
+- `my_variable is not None` checks if the variable is NOT None → False
+
+Expected output:
+
+```
+True
+False
+```
+
+#### 16. Complex range validation — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+value = 42
+
+# The main program starts here.
+print((30 <= value <= 50) or (70 <= value <= 90))
+```
+
+Explanation:
+
+- We check if the value is in either range: 30-50 OR 70-90.
+- `30 <= 42 <= 50` is True (42 is in the first range).
+- Since the first condition is True, the entire OR expression is True.
+
+Expected output:
+
+```
+True
+```
+
+### Predict
+
+#### 17. Advanced logical combinations — solution and explanation
+
+Code:
+
+```python
+x = 30
+y = 40
+z = 35
+print((x < z < y) and (z % 5 == 0))
+print((x > 25) or (y < 35) and (z != 35))
+print(not ((x < y) and (y > z)))
+```
+
+Step-by-step analysis:
+
+1. `(x < z < y) and (z % 5 == 0)` → `(30 < 35 < 40) and (35 % 5 == 0)` → True and True → True
+2. `(x > 25) or (y < 35) and (z != 35)` → `(30 > 25) or (40 < 35) and (35 != 35)` → True or (False and False) → True or False → True
+3. `not ((x < y) and (y > z))` → `not ((30 < 40) and (40 > 35))` → not (True and True) → not True → False
+
+Expected output:
+
+```
+True
+True
+False
+```
+
+#### 18. Ternary with comparisons — solution and explanation
+
+Code:
+
+```python
+speed = 60
+limit = 50
+result = "OK" if speed <= limit else ("Warning" if speed <= limit + 10 else "Danger")
+print(result)
+
+battery = 85
+status = "High" if battery > 75 else ("Medium" if battery > 25 else "Low")
+print(status)
+```
+
+Step-by-step analysis:
+
+1. First ternary: Is 60 ≤ 50? False. Is 60 ≤ 60? True. So "Warning".
+2. Second ternary: Is 85 > 75? True. So "High".
+
+Expected output:
+
+```
+Warning
+High
+```
+
+---
+
+## Challenge
+
+### Implement
+
+#### 19. Robot safety system — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+battery = 30
+obstacles_detected = False
+emergency_stop = False
+system_ok = True
+
+# The main program starts here.
+print((battery > 25) and (not obstacles_detected) and (not emergency_stop) and system_ok)
+```
+
+Explanation:
+
+- All safety conditions: battery > 25, no obstacles, no emergency stop, system ok.
+- `30 > 25` is True, `not False` is True, `not False` is True, `True` is True.
+- True AND True AND True AND True equals True.
+
+Expected output:
+
+```
+True
+```
+
+#### 20. Sensor fusion decision — solution and explanation
+
+Solution (code):
+
+```python
+# Initialize variables.
+sensor1 = 12
+sensor2 = 8
+sensor3 = 15
+
+# The main program starts here.
+in_range1 = 10 <= sensor1 <= 20
+in_range2 = 10 <= sensor2 <= 20
+in_range3 = 10 <= sensor3 <= 20
+
+# Count how many sensors are in range (at least 2 out of 3)
+count = (in_range1 and 1 or 0) + (in_range2 and 1 or 0) + (in_range3 and 1 or 0)
+print(count >= 2)
+```
+
+Or a simpler approach:
+
+```python
+# Initialize variables.
+sensor1 = 12
+sensor2 = 8
+sensor3 = 15
+
+# The main program starts here.
+in_range1 = 10 <= sensor1 <= 20  # True (12 is in range)
+in_range2 = 10 <= sensor2 <= 20  # False (8 is not in range)
+in_range3 = 10 <= sensor3 <= 20  # True (15 is in range)
+
+# At least 2 out of 3 means: (1 and 2) or (1 and 3) or (2 and 3)
+print((in_range1 and in_range2) or (in_range1 and in_range3) or (in_range2 and in_range3))
+```
+
+Explanation:
+
+- sensor1 (12) is in range 10-20: True
+- sensor2 (8) is in range 10-20: False
+- sensor3 (15) is in range 10-20: True
+- At least 2 out of 3 are in range (sensors 1 and 3), so the result is True.
+
+Expected output:
+
+```
+True
+```
+
+### Predict
+
+#### 21. Ultimate boolean challenge — solution and explanation
+
+Code:
+
+```python
+a, b, c = 10, 20, 15
+condition1 = (a < b < c * 2) and (c % 5 == 0)
+condition2 = (b >= 20) or (a == c - 5)
+condition3 = not (a > c)
+final_result = condition1 and condition2 and condition3
+print(condition1)
+print(condition2)
+print(condition3)
+print(final_result)
+```
+
+Step-by-step analysis:
+
+- `condition1 = (a < b < c * 2) and (c % 5 == 0)`
+
+  - `(10 < 20 < 15 * 2)` → `(10 < 20 < 30)` → True
+  - `(15 % 5 == 0)` → `(0 == 0)` → True
+  - True and True → True
+
+- `condition2 = (b >= 20) or (a == c - 5)`
+
+  - `(20 >= 20)` → True
+  - `(10 == 15 - 5)` → `(10 == 10)` → True
+  - True or True → True
+
+- `condition3 = not (a > c)`
+
+  - `not (10 > 15)` → not False → True
+
+- `final_result = condition1 and condition2 and condition3`
+  - True and True and True → True
+
+Expected output:
+
+```
+True
+True
+True
+True
+```

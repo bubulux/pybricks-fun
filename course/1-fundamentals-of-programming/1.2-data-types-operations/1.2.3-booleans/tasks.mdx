@@ -1,0 +1,279 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="1. Fundamentals of Programming/1.2 Data Types & Operations/1.2.3 Booleans/1.2.3.2 Tasks" />
+
+# 1.2.3.2 Booleans - Tasks
+
+Below are practice tasks based only on the material covered so far: variables, numbers, and booleans (comparisons, logical operations, ternary operators, and None). We'll provide a separate solutions article later — try these on your own first.
+
+Rules:
+
+- The tasks can be solved with the things you have learned so far.
+- You can use everything from the Variables, Numbers, and Booleans sections
+- But you cannot use anything else from other sections (like control flow, loops, etc.)
+
+---
+
+## Easy
+
+### Implement
+
+#### 1. Print basic boolean values
+
+Goal: Display the two fundamental boolean values on separate lines.
+
+Expected output:
+
+```
+True
+False
+```
+
+#### 2. Compare two numbers
+
+Goal: Store the numbers 15 and 20 in variables, then check if the first number is greater than the second.
+
+Expected output:
+
+```
+False
+```
+
+#### 3. Test equality
+
+Goal: Create two variables with the same value (your choice of number) and verify they are equal.
+
+Expected output:
+
+```
+True
+```
+
+#### 4. Chain comparison
+
+Goal: Check if the number 25 is between 20 and 30 (inclusive) using a chained comparison.
+
+Expected output:
+
+```
+True
+```
+
+### Predict
+
+#### 5. Multiple comparisons
+
+What will this code print?
+
+```python
+x = 10
+y = 20
+print(x < y)
+print(x == y)
+print(x >= y)
+```
+
+#### 6. Logical operations
+
+What will this code print?
+
+```python
+print(True and False)
+print(False or True)
+print(not True)
+print(not False)
+```
+
+---
+
+## Medium
+
+### Implement
+
+#### 7. Battery check simulation
+
+Goal: Create a battery level variable (set it to 35) and check if it's both greater than 30 AND less than 80.
+
+Expected output:
+
+```
+True
+```
+
+#### 8. Sensor range validation
+
+Goal: Simulate a sensor reading (set to 45) and check if it's outside the valid range of 10 to 50 using logical operations.
+
+Expected output:
+
+```
+False
+```
+
+#### 9. Speed selection
+
+Goal: Create a battery level variable (set to 25). Use a ternary operator to choose "Slow" if battery is below 50, otherwise choose "Fast".
+
+Expected output:
+
+```
+Slow
+```
+
+#### 10. Temperature and humidity check
+
+Goal: Create temperature (22) and humidity (65) variables. Check if EITHER the temperature is below 25 OR the humidity is above 70.
+
+Expected output:
+
+```
+True
+```
+
+### Predict
+
+#### 11. Complex logical expression
+
+What will this code print?
+
+```python
+a = 15
+b = 25
+c = 20
+print((a < b) and (b > c))
+print((a == 15) or (c < 10))
+print(not (a > b))
+```
+
+#### 12. Chained comparisons with variables
+
+What will this code print?
+
+```python
+min_val = 5
+sensor = 12
+max_val = 20
+print(min_val < sensor < max_val)
+print(0 <= sensor <= 10)
+```
+
+---
+
+## Hard
+
+### Implement
+
+#### 13. Multi-condition robot status
+
+Goal: Create variables for battery (45), temperature (28), and a boolean for daylight (True). Check if the robot is ready to operate: battery above 40, temperature below 30, and it's daytime.
+
+Expected output:
+
+```
+True
+```
+
+#### 14. Nested ternary decision
+
+Goal: Create a score variable (set to 75). Use nested ternary operators to assign a grade: "A" if score >= 90, "B" if score >= 80, otherwise "C".
+
+Expected output:
+
+```
+C
+```
+
+#### 15. None value checking
+
+Goal: Create a variable set to None, then check if it is None and if it is not None on separate lines.
+
+Expected output:
+
+```
+True
+False
+```
+
+#### 16. Complex range validation
+
+Goal: Create a value variable (set to 42). Check if it's in the range 30-50 OR in the range 70-90 using logical operations.
+
+Expected output:
+
+```
+True
+```
+
+### Predict
+
+#### 17. Advanced logical combinations
+
+What will this code print?
+
+```python
+x = 30
+y = 40
+z = 35
+print((x < z < y) and (z % 5 == 0))
+print((x > 25) or (y < 35) and (z != 35))
+print(not ((x < y) and (y > z)))
+```
+
+#### 18. Ternary with comparisons
+
+What will this code print?
+
+```python
+speed = 60
+limit = 50
+result = "OK" if speed <= limit else ("Warning" if speed <= limit + 10 else "Danger")
+print(result)
+
+battery = 85
+status = "High" if battery > 75 else ("Medium" if battery > 25 else "Low")
+print(status)
+```
+
+---
+
+## Challenge
+
+### Implement
+
+#### 19. Robot safety system
+
+Goal: Create a comprehensive safety check with variables: battery (30), obstacles_detected (False), emergency_stop (False), and system_ok (True). The robot is safe to operate if: battery > 25, no obstacles detected, no emergency stop, and system is ok.
+
+Expected output:
+
+```
+True
+```
+
+#### 20. Sensor fusion decision
+
+Goal: Create three sensor readings: sensor1 (12), sensor2 (8), sensor3 (15). The system should return True if at least 2 out of 3 sensors read values between 10 and 20.
+
+Expected output:
+
+```
+True
+```
+
+### Predict
+
+#### 21. Ultimate boolean challenge
+
+What will this code print?
+
+```python
+a, b, c = 10, 20, 15
+condition1 = (a < b < c * 2) and (c % 5 == 0)
+condition2 = (b >= 20) or (a == c - 5)
+condition3 = not (a > c)
+final_result = condition1 and condition2 and condition3
+print(condition1)
+print(condition2)
+print(condition3)
+print(final_result)
+```
